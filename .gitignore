@@ -1,0 +1,12 @@
+﻿Library
+Logs
+*.sln
+*.csproj
+Temp
+Recordings
+UIElementsSchema
+UserSettings
+obj
+.idea
+*.keystore
+Assets/Keystore.keystore.meta
