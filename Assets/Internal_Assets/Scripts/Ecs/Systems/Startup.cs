@@ -20,6 +20,7 @@ namespace Secret
             #region Systems
 
             systemGroup.AddSystem(new MobileInputSystem());
+            systemGroup.AddSystem(new MovementSystem());
 
 
             #endregion

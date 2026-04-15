@@ -234,17 +234,6 @@ public partial class @Input_Actions: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""168aac39-f0f0-4ec6-bca1-f8a49348d71c"",
-                    ""path"": ""<Touchscreen>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Touch"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
