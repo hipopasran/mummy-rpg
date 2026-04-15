@@ -19,6 +19,7 @@ namespace Secret
 
             #region Systems
 
+            systemGroup.AddSystem(new MobileInputSystem());
 
 
             #endregion
