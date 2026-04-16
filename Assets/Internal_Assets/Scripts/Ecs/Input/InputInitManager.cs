@@ -11,10 +11,11 @@ namespace Secret
         public static InputInitManager Instance;
 
         [SerializeField] private InputActionAsset _inputActions;
+        [SerializeField] private Image _joystickBack;
+        
+        private Vector3 _joystickStartPoint;
         private InputAction _moveAction;
         private Vector2 _moveValue;
-        [SerializeField] private Image _joystickBack;
-        [SerializeField] private Vector3 _joystickStartPoint;
 
         public InputAction MoveAction => _moveAction;
 
