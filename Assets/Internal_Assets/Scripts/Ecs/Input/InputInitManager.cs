@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -40,8 +41,11 @@ namespace Secret
         {
             if (Input.GetMouseButtonDown(0))
             {
-                _joystickBack.gameObject.SetActive(true);
-                _joystickBack.transform.position = Input.mousePosition;
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    _joystickBack.gameObject.SetActive(true);
+                    _joystickBack.transform.position = Input.mousePosition;
+                }
             }
 
             if (Input.GetMouseButtonUp(0))
