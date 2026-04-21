@@ -22,7 +22,7 @@ namespace Secret
             systemGroup.AddSystem(new MobileInputSystem());
             systemGroup.AddSystem(new MovementSystem());
             systemGroup.AddSystem(new EnemyInitSpawnSystem());
-
+            systemGroup.AddSystem(new EnemyWalkSystem());
 
             #endregion
 

@@ -41,6 +41,8 @@ namespace Secret
                     var newEnemy = GameObject.Instantiate(spawner.EnemyPrefab, spawnPos, Quaternion.identity);
                     newEnemy.transform.SetParent(spawner.Position);
                     newEnemy.Setup(entity, spawner.Position.position, spawner.Radius);
+                    var walkFilter = newEnemy.gameObject.AddComponent<EnemyWalkFilter>();
+                    walkFilter.Setup();
 
                     spawner.ExistEnemyCount += 1;
                 }
