@@ -20,5 +20,16 @@ namespace Secret
 
             c.Agent.avoidancePriority = agentPriority;
         }
+
+        public void SetWalkParams(float minIdleTime, float maxIdleTime, float walkSpeed, float runSpeed)
+        {
+            ref var c = ref Stash.Get(Entity);
+            c.WaitIdleMinTime = minIdleTime;
+            c.WaitIdleMaxTime = maxIdleTime;
+            c.WalkSpeed = walkSpeed;
+            c.RunSpeed = runSpeed;
+
+            c.Agent.speed = walkSpeed;
+        }
     }
 }

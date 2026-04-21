@@ -27,8 +27,16 @@ namespace Secret
             {
                 ref var spawner = ref _spawnerStash.Get(entity);
 
+                SetupSpawner(ref spawner);
                 Spawn(ref spawner, deltaTime, entity);
             }
+        }
+
+        private void SetupSpawner(ref SpawnerComponent spawner)
+        {
+            spawner.Radius = spawner.Setup.Radius;
+            spawner.EnemyCount = spawner.Setup.EnemyCount;
+            spawner.EnemyPrefab = spawner.Setup.EnemyPrefab;
         }
 
         private void Spawn(ref SpawnerComponent spawner, float deltaTime, Entity entity)
@@ -41,6 +49,7 @@ namespace Secret
                     var newEnemy = GameObject.Instantiate(spawner.EnemyPrefab, spawnPos, Quaternion.identity);
                     newEnemy.transform.SetParent(spawner.Position);
                     newEnemy.Setup(entity, spawner.Position.position, spawner.Radius, 99 - spawner.ExistEnemyCount);
+                    newEnemy.SetWalkParams(spawner.Setup.WaitIdleMinTime, spawner.Setup.WaitIdleMaxTime, spawner.Setup.WalkSpeed, spawner.Setup.RunSpeed);
                     var walkFilter = newEnemy.gameObject.AddComponent<EnemyWalkFilter>();
                     walkFilter.Setup();
 

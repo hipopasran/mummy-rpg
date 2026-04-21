@@ -40,7 +40,7 @@ namespace Secret
             {
                 Object.Destroy(walkProgress.FilterLink);
                 var idleFilter = enemy.Root.gameObject.AddComponent<EnemyWaitIdleFilter>();
-                idleFilter.Setup(Random.Range(1f, 3f));
+                idleFilter.Setup(Random.Range(enemy.WaitIdleMinTime, enemy.WaitIdleMaxTime));
             }
         }
     }
