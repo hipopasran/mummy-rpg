@@ -19,10 +19,16 @@ namespace Secret
 
             #region Systems
 
+            // Player Movement
             systemGroup.AddSystem(new MobileInputSystem());
             systemGroup.AddSystem(new MovementSystem());
+            
+            // Enemy Spawn
             systemGroup.AddSystem(new EnemyInitSpawnSystem());
+            
+            // Enemy movement
             systemGroup.AddSystem(new EnemyWalkSystem());
+            systemGroup.AddSystem(new EnemyWalkInProgressSystem());
 
             #endregion
 

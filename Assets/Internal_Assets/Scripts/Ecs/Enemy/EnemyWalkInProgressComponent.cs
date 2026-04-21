@@ -11,6 +11,7 @@ namespace Secret
     public struct EnemyWalkInProgressComponent : IComponent
     {
         public Vector3 WalkPosition;
+        public EnemyWalkInProgressFilter FilterLink;
     }
 }
 

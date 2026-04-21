@@ -14,6 +14,7 @@ namespace Secret
         {
             ref var c = ref Stash.Get(Entity);
             c.WalkPosition = destination;
+            c.FilterLink = this;
         }
     }
 }
