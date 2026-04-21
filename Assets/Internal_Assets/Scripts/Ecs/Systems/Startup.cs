@@ -29,6 +29,7 @@ namespace Secret
             // Enemy movement
             systemGroup.AddSystem(new EnemyWalkSystem());
             systemGroup.AddSystem(new EnemyWalkInProgressSystem());
+            systemGroup.AddSystem(new EnemyWaitIdleSystem());
 
             #endregion
 
