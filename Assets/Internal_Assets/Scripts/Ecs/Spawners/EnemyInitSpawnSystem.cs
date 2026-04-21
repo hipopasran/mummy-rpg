@@ -8,6 +8,7 @@ namespace Secret
     {
         private Filter _filter;
         private Stash<SpawnerComponent> _spawnerStash;
+        private Stash<SpawnerInitStateComponent> _spawnerInitStash;
 
         public World World { get; set; }
         public void Dispose()
@@ -17,8 +18,9 @@ namespace Secret
 
         public void OnAwake()
         {
-            this._filter = this.World.Filter.With<SpawnerComponent>().Build();
+            this._filter = this.World.Filter.With<SpawnerComponent>().With<SpawnerInitStateComponent>().Build();
             this._spawnerStash = this.World.GetStash<SpawnerComponent>();
+            this._spawnerInitStash = this.World.GetStash<SpawnerInitStateComponent>();
         }
         
         public void OnUpdate(float deltaTime)
@@ -26,9 +28,10 @@ namespace Secret
             foreach (Entity entity in this._filter)
             {
                 ref var spawner = ref _spawnerStash.Get(entity);
+                ref var spawnerInit = ref _spawnerInitStash.Get(entity);
 
                 SetupSpawner(ref spawner);
-                Spawn(ref spawner, deltaTime, entity);
+                Spawn(ref spawner, ref spawnerInit, deltaTime, entity);
             }
         }
 
@@ -39,7 +42,7 @@ namespace Secret
             spawner.EnemyPrefab = spawner.Setup.EnemyPrefab;
         }
 
-        private void Spawn(ref SpawnerComponent spawner, float deltaTime, Entity entity)
+        private void Spawn(ref SpawnerComponent spawner, ref SpawnerInitStateComponent spawnerInit, float deltaTime, Entity entity)
         {
             if (spawner.ExistEnemyCount < spawner.EnemyCount)
             {
@@ -55,6 +58,8 @@ namespace Secret
 
                     spawner.ExistEnemyCount += 1;
                 }
+                
+                Object.Destroy(spawnerInit.FilterLink);
             }
         }
         
