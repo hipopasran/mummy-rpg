@@ -27,11 +27,11 @@ namespace Secret
             {
                 ref var spawner = ref _spawnerStash.Get(entity);
 
-                Spawn(ref spawner, deltaTime);
+                Spawn(ref spawner, deltaTime, entity);
             }
         }
 
-        private void Spawn(ref SpawnerComponent spawner, float deltaTime)
+        private void Spawn(ref SpawnerComponent spawner, float deltaTime, Entity entity)
         {
             if (spawner.ExistEnemyCount < spawner.EnemyCount)
             {
@@ -40,6 +40,7 @@ namespace Secret
                     var spawnPos = GetNearestNavMeshPoint(spawner.Position.position, spawner.Radius);
                     var newEnemy = GameObject.Instantiate(spawner.EnemyPrefab, spawnPos, Quaternion.identity);
                     newEnemy.transform.SetParent(spawner.Position);
+                    newEnemy.Setup(entity, spawner.Position.position, spawner.Radius);
 
                     spawner.ExistEnemyCount += 1;
                 }

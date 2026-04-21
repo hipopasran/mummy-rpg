@@ -1,6 +1,7 @@
 using Scellecs.Morpeh;
 using UnityEngine;
 using Unity.IL2CPP.CompilerServices;
+using UnityEngine.AI;
 
 namespace Secret
 {
@@ -8,12 +9,12 @@ namespace Secret
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public struct SpawnerComponent : IComponent
+    public struct EnemyComponent : IComponent
     {
-        public Transform Position;
-        public float Radius;
-        public int EnemyCount;
-        public int ExistEnemyCount;
-        public Enemy EnemyPrefab;
+        public Transform Root;
+        public NavMeshAgent Agent;
+        public Entity Spawner;
+        public Vector3 SpawnerPosition;
+        public float SpawnerRadius;
     }
 }
