@@ -40,7 +40,7 @@ namespace Secret
                     var spawnPos = GetNearestNavMeshPoint(spawner.Position.position, spawner.Radius);
                     var newEnemy = GameObject.Instantiate(spawner.EnemyPrefab, spawnPos, Quaternion.identity);
                     newEnemy.transform.SetParent(spawner.Position);
-                    newEnemy.Setup(entity, spawner.Position.position, spawner.Radius);
+                    newEnemy.Setup(entity, spawner.Position.position, spawner.Radius, 99 - spawner.ExistEnemyCount);
                     var walkFilter = newEnemy.gameObject.AddComponent<EnemyWalkFilter>();
                     walkFilter.Setup();
 

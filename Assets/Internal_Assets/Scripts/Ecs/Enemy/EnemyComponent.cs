@@ -13,6 +13,7 @@ namespace Secret
     {
         public Transform Root;
         public NavMeshAgent Agent;
+        public int AgentPriority;
         public Entity Spawner;
         public Vector3 SpawnerPosition;
         public float SpawnerRadius;
