@@ -22,8 +22,9 @@ namespace Secret
 
         public float WalkSpeed;
         public float RunSpeed;
-        
-        [Title("Debug")]
+
+        [Title("Debug")] 
+        public Spawner SpawerLink;
         public int AgentPriority;
         public Entity Spawner;
         public Vector3 SpawnerPosition;

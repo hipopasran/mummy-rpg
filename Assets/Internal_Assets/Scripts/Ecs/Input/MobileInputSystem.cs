@@ -48,6 +48,7 @@ namespace Secret
         private void CheckInput(ref MobileInputComponent mobileInput)
         {
             mobileInput.Rotation = _moveValue;
+            mobileInput.Magnitude = _moveValue.magnitude;
         }
         
         private float Lerp01(float value, float maxValue) =>

@@ -30,6 +30,9 @@ namespace Secret
             systemGroup.AddSystem(new EnemyWalkSystem());
             systemGroup.AddSystem(new EnemyWalkInProgressSystem());
             systemGroup.AddSystem(new EnemyWaitIdleSystem());
+            
+            // Camera
+            systemGroup.AddSystem(new CameraScaleSystem());
 
             #endregion
 

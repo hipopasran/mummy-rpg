@@ -126,8 +126,7 @@ GameObject:
   - component: {fileID: 6566819851085535462}
   - component: {fileID: 5610821053426460752}
   - component: {fileID: 41546231484930575}
-  - component: {fileID: 8194072660105838885}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,23 +264,11 @@ MonoBehaviour:
   serializedData:
     Root: {fileID: 8449049943267492442}
     Agent: {fileID: 5610821053426460752}
+    WaitIdleMinTime: 0
+    WaitIdleMaxTime: 0
+    WalkSpeed: 0
+    RunSpeed: 0
+    SpawerLink: {fileID: 0}
     AgentPriority: 0
     SpawnerPosition: {x: 0, y: 0, z: 0}
     SpawnerRadius: 0
---- !u!114 &8194072660105838885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2471530231521872930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
-  m_SerializedVersion: 0
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Area: 1
-  m_AffectedAgents: ffffffff

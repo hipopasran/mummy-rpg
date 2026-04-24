@@ -51,7 +51,7 @@ namespace Secret
                     var spawnPos = GetNearestNavMeshPoint(spawner.Position.position, spawner.Radius);
                     var newEnemy = GameObject.Instantiate(spawner.EnemyPrefab, spawnPos, Quaternion.identity);
                     newEnemy.transform.SetParent(spawner.Position);
-                    newEnemy.Setup(entity, spawner.Position.position, spawner.Radius, 99 - spawner.ExistEnemyCount);
+                    newEnemy.Setup(spawner.SpawnerLink,entity, spawner.Position.position, spawner.Radius, 99 - spawner.ExistEnemyCount);
                     newEnemy.SetWalkParams(spawner.Setup.WaitIdleMinTime, spawner.Setup.WaitIdleMaxTime, spawner.Setup.WalkSpeed, spawner.Setup.RunSpeed);
                     var walkFilter = newEnemy.gameObject.AddComponent<EnemyWalkFilter>();
                     walkFilter.Setup();

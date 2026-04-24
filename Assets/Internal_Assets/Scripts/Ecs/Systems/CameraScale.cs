@@ -1,17 +1,15 @@
 using Scellecs.Morpeh;
-using UnityEngine;
+using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
+using UnityEngine;
 
 namespace Secret
 {
-    [System.Serializable]
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-
-    public struct MobileInputComponent : IComponent
+    public class CameraScale : MonoProvider<CameraScaleComponent>
     {
-        public Vector2 Rotation;
-        public float Magnitude;
+        
     }
 }

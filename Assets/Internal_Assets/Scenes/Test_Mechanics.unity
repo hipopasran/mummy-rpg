@@ -338,7 +338,7 @@ RectTransform:
   m_GameObject: {fileID: 617420811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 679745309}
@@ -1121,7 +1121,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 67.76109
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1147,8 +1147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4183051, y: 9.980651e-16, z: -4.5964185e-16, w: 0.9083066}
-  m_LocalPosition: {x: 1.3, y: 12.306666, z: -18.35}
+  m_LocalRotation: {x: 0.50049305, y: 0.000000014350758, z: -0.000000008296312, w: 0.8657406}
+  m_LocalPosition: {x: 1.3, y: 12.616667, z: -15.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1198,6 +1198,8 @@ GameObject:
   - component: {fileID: 1143131967}
   - component: {fileID: 1143131969}
   - component: {fileID: 1143131968}
+  - component: {fileID: 1143131970}
+  - component: {fileID: 1143131971}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -1213,8 +1215,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143131964}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4183051, y: 1.0338191e-15, z: -5.3727787e-16, w: 0.9083066}
-  m_LocalPosition: {x: 1.3, y: 12.306666, z: -18.35}
+  m_LocalRotation: {x: 0.500493, y: 0.000000014350755, z: -0.000000008296309, w: 0.86574066}
+  m_LocalPosition: {x: 1.3, y: 12.616667, z: -15.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1244,7 +1246,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 67.76109
+    FieldOfView: 70
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -1310,7 +1312,40 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 11.69, z: -10}
+  FollowOffset: {x: 0, y: 12, z: -6.91}
+--- !u!114 &1143131970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143131964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057d5b7bbedd143efa3efe997ae3d5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Secret.MobileInput
+  serializedData:
+    Rotation: {x: 0, y: 0}
+    Magnitude: 0
+--- !u!114 &1143131971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143131964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6f8c01a4d784de581bda97369e2531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Secret.CameraScale
+  serializedData:
+    CinemachineCamera: {fileID: 1143131967}
+    MinFOV: 80
+    MaxFOV: 85
+    TimeToZero: 10
+    Timer: 0
 --- !u!1 &1188274870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.Spawner
   serializedData:
+    SpawnerLink: {fileID: 1565530443}
     Setup: {fileID: 11400000, guid: 4a8c9213359b24aad8497d69e1b14d09, type: 2}
     Position: {fileID: 1565530439}
     Radius: 4
@@ -1759,6 +1795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Secret.MobileInput
   serializedData:
     Rotation: {x: 0, y: 0}
+    Magnitude: 0
 --- !u!114 &2004845476
 MonoBehaviour:
   m_ObjectHideFlags: 0
