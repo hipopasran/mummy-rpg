@@ -12,6 +12,7 @@ namespace Secret
     public struct CameraScaleComponent : IComponent
     {
         public CinemachineCamera CinemachineCamera;
+        public Camera UICamera;
         public float MinFOV;
         public float MaxFOV;
         public float TimeToZero;

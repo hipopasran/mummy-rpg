@@ -37,6 +37,7 @@ namespace Secret
         {
             camera.CinemachineCamera.Lens.FieldOfView =
                 camera.MinFOV + (camera.MaxFOV - camera.MinFOV) * input.Magnitude;
+            // camera.UICamera.fieldOfView = camera.MinFOV + (camera.MaxFOV - camera.MinFOV) * input.Magnitude;
         }
     }
 }
