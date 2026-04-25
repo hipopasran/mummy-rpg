@@ -16,6 +16,10 @@ namespace Secret
         public Transform Root;
         public NavMeshAgent Agent;
 
+        [Title("Health")]
+        public float StartHealth;
+        public float CurrentHealth;
+
         [Title("Params")] 
         public float WaitIdleMinTime;
         public float WaitIdleMaxTime;

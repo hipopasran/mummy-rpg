@@ -33,6 +33,9 @@ namespace Secret
             
             // Camera
             systemGroup.AddSystem(new CameraScaleSystem());
+            
+            // HealthBar
+            systemGroup.AddSystem(new HealthBarRotationSystem());
 
             #endregion
 
