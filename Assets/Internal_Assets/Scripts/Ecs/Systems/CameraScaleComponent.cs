@@ -17,5 +17,7 @@ namespace Secret
         public float MaxFOV;
         public float TimeToZero;
         public float Timer;
+        public float TimeToFOV;
+        public bool UpOrDown;
     }
 }

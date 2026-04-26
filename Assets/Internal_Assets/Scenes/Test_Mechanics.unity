@@ -1462,8 +1462,10 @@ MonoBehaviour:
     UICamera: {fileID: 287245038}
     MinFOV: 80
     MaxFOV: 85
-    TimeToZero: 10
+    TimeToZero: 2
     Timer: 0
+    TimeToFOV: 1
+    UpOrDown: 0
 --- !u!1 &1188274870
 GameObject:
   m_ObjectHideFlags: 0

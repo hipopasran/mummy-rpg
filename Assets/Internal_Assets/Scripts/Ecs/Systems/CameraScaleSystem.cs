@@ -28,16 +28,58 @@ namespace Secret
             {
                 ref var input = ref _inputStash.Get(entity);
                 ref var camera = ref _cameraStash.Get(entity);
-                
-                ScaleCamera(ref camera, ref input);
+
+                if (input.Magnitude > 0)
+                {
+                    if (!camera.UpOrDown)
+                    {
+                        camera.UpOrDown = true;
+                        camera.Timer = 0f;
+                    }
+                    ScaleCamera(ref camera, ref input, deltaTime);
+                }
+                else
+                {
+                    if (camera.UpOrDown)
+                    {
+                        camera.UpOrDown = false;
+                        camera.Timer = 0f;
+                    }
+                    if (camera.CinemachineCamera.Lens.FieldOfView > camera.MinFOV)
+                    {
+                        ScaleCameraToZero(ref camera, ref input, deltaTime);
+                    }
+                }
             }
         }
 
-        private void ScaleCamera(ref CameraScaleComponent camera, ref  MobileInputComponent input)
+        private void ScaleCamera(ref CameraScaleComponent camera, ref  MobileInputComponent input, float deltaTime)
         {
-            camera.CinemachineCamera.Lens.FieldOfView =
-                camera.MinFOV + (camera.MaxFOV - camera.MinFOV) * input.Magnitude;
+            var fov = camera.MinFOV + (camera.MaxFOV - camera.MinFOV) * input.Magnitude;
+            camera.Timer += deltaTime;
+            // camera.CinemachineCamera.Lens.FieldOfView = fov;
+            // camera.Timer = 0;
             // camera.UICamera.fieldOfView = camera.MinFOV + (camera.MaxFOV - camera.MinFOV) * input.Magnitude;
+
+            camera.CinemachineCamera.Lens.FieldOfView = Mathf.Lerp(camera.CinemachineCamera.Lens.FieldOfView,
+                fov, camera.Timer / camera.TimeToFOV);
+
+            if (camera.CinemachineCamera.Lens.FieldOfView >= fov)
+            {
+                camera.Timer = 0f;
+            }
+        }
+
+        private void ScaleCameraToZero(ref CameraScaleComponent camera, ref  MobileInputComponent input, float deltaTime)
+        {
+            camera.Timer += deltaTime;
+            camera.CinemachineCamera.Lens.FieldOfView =
+                Mathf.Lerp(camera.CinemachineCamera.Lens.FieldOfView, camera.MinFOV, camera.Timer/camera.TimeToZero);
+
+            if (camera.CinemachineCamera.Lens.FieldOfView <= camera.MinFOV)
+            {
+                camera.Timer = 0f;
+            }
         }
     }
 }
