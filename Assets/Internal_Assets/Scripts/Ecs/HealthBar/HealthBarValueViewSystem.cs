@@ -29,16 +29,19 @@ namespace Secret
                 ref var enemy = ref _enemyStash.Get(entity);
                 ref var bar = ref _barStash.Get(entity);
                 
-                UpdateHealthBarView(ref enemy, ref bar);
+                UpdateHealthBarView(ref enemy, ref bar, deltaTime);
             }
         }
 
-        private void UpdateHealthBarView(ref EnemyComponent enemy, ref HealthBarComponent bar)
+        private void UpdateHealthBarView(ref EnemyComponent enemy, ref HealthBarComponent bar, float deltaTime)
         {
             var healthPercent = enemy.CurrentHealth / enemy.StartHealth;
             bar.PercentText.text = $"{(int)(healthPercent*100f)}%";
 
             bar.Fill.rectTransform.sizeDelta = new Vector2(bar.WidthMax * healthPercent, bar.Fill.rectTransform.sizeDelta.y);
+            
+            // Test DMG
+            // enemy.CurrentHealth -= 10f * deltaTime;
         }
     }
 }
