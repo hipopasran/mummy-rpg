@@ -1,4 +1,5 @@
 using Scellecs.Morpeh;
+using TMPro;
 using UnityEngine;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ namespace Secret
     {
         public Transform Root;
         public Transform Background;
+        public TextMeshProUGUI PercentText;
         public Image Fill;
         public float WidthMax;
     }

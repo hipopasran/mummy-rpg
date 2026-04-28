@@ -232,8 +232,8 @@ MonoBehaviour:
   serializedData:
     Root: {fileID: 8449049943267492442}
     Agent: {fileID: 5610821053426460752}
-    StartHealth: 0
-    CurrentHealth: 0
+    StartHealth: 100
+    CurrentHealth: 100
     WaitIdleMinTime: 0
     WaitIdleMaxTime: 0
     WalkSpeed: 0
@@ -256,9 +256,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Secret.HealthBarProvider
   serializedData:
     Root: {fileID: 6310846363928929657}
-    Background: {fileID: 0}
-    Fill: {fileID: 0}
-    WidthMax: 97
+    Background: {fileID: 7177606519442194043}
+    PercentText: {fileID: 5996986961351734099}
+    Fill: {fileID: 7837956313316806352}
+    WidthMax: 2400
 --- !u!1 &3333554620095067143
 GameObject:
   m_ObjectHideFlags: 0

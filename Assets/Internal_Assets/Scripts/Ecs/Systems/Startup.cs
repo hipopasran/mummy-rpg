@@ -36,6 +36,7 @@ namespace Secret
             
             // HealthBar
             systemGroup.AddSystem(new HealthBarRotationSystem());
+            systemGroup.AddSystem(new HealthBarValueViewSystem());
 
             #endregion
 
