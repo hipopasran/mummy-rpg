@@ -31,12 +31,17 @@ namespace Secret
             systemGroup.AddSystem(new EnemyWalkInProgressSystem());
             systemGroup.AddSystem(new EnemyWaitIdleSystem());
             
-            // Camera
-            systemGroup.AddSystem(new CameraScaleSystem());
+            // Enemy DMG
+            systemGroup.AddSystem(new ApplyDamageSystem());
+            systemGroup.AddSystem(new ApplyHealSystem());
             
             // HealthBar
             systemGroup.AddSystem(new HealthBarRotationSystem());
             systemGroup.AddSystem(new HealthBarValueViewSystem());
+            
+            // Camera
+            systemGroup.AddSystem(new CameraScaleSystem());
+            
 
             #endregion
 
