@@ -150,7 +150,6 @@ GameObject:
   - component: {fileID: 5610821053426460752}
   - component: {fileID: 41546231484930575}
   - component: {fileID: 432958154498546532}
-  - component: {fileID: 7585779999088344111}
   m_Layer: 6
   m_Name: Enemy_Test
   m_TagString: Untagged
@@ -261,18 +260,6 @@ MonoBehaviour:
     PercentText: {fileID: 5996986961351734099}
     Fill: {fileID: 7837956313316806352}
     WidthMax: 2400
---- !u!114 &7585779999088344111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2471530231521872930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb2f31a11ae84555a86264e884bb578, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Secret.ActiveDamage
 --- !u!1 &3333554620095067143
 GameObject:
   m_ObjectHideFlags: 0
