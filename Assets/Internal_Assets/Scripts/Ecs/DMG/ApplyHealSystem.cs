@@ -42,7 +42,6 @@ namespace Secret
             {
                 var p = enemy.Root.gameObject.GetComponent<ActiveHeal>();
                 Object.Destroy(p);
-                enemy.Root.AddComponent<ActiveDamage>();
             }
         }
     }
