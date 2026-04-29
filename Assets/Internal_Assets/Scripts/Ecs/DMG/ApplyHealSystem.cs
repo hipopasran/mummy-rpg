@@ -40,6 +40,7 @@ namespace Secret
 
             if (enemy.CurrentHealth >= enemy.StartHealth)
             {
+                enemy.CurrentHealth = enemy.StartHealth;
                 var p = enemy.Root.gameObject.GetComponent<ActiveHeal>();
                 Object.Destroy(p);
             }

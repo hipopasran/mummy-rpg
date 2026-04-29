@@ -18,6 +18,11 @@ namespace Secret
                 {
                     other.gameObject.AddComponent<ActiveDamage>();
                 }
+
+                if (other.gameObject.TryGetComponent(out ActiveHeal activeHeal))
+                {
+                    Object.Destroy(activeHeal);
+                }
             }
         }
 
