@@ -34,6 +34,7 @@ namespace Secret
             // Enemy DMG
             systemGroup.AddSystem(new ApplyDamageSystem());
             systemGroup.AddSystem(new ApplyHealSystem());
+            systemGroup.AddSystem(new HealWaitSystem());
             
             // HealthBar
             systemGroup.AddSystem(new HealthBarRotationSystem());

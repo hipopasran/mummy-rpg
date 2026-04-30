@@ -23,6 +23,11 @@ namespace Secret
                 {
                     Object.Destroy(activeHeal);
                 }
+
+                if (other.gameObject.TryGetComponent(out HealWait healwait))
+                {
+                    Object.Destroy(healwait);
+                }
             }
         }
 
@@ -33,7 +38,8 @@ namespace Secret
                 if (other.gameObject.TryGetComponent(out ActiveDamage activeDamage))
                 {
                     Object.Destroy(activeDamage);
-                    other.gameObject.AddComponent<ActiveHeal>();
+                    var hw = other.gameObject.AddComponent<HealWait>();
+                    hw.Setup(2f);
                 }
             }
         }

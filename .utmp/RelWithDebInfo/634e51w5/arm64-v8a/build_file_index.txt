@@ -1,0 +1,3 @@
+/Users/vladimirkeda/Projects/Secret/mummy-rpg/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/vladimirkeda/Projects/Secret/mummy-rpg/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing/CMakeLists.txt
+/Users/vladimirkeda/Projects/Secret/mummy-rpg/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
