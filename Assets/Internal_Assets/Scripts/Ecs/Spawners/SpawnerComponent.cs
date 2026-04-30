@@ -10,12 +10,16 @@ namespace Secret
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public struct SpawnerComponent : IComponent
     {
+        public GameObject SpawnerGameObject;
         public Spawner SpawnerLink;
         public EnemySetupForSpawner Setup;
         public Transform Position;
+        public float TimeToRespawn;
+        public float Timer;
+        
        [HideInInspector] public float Radius;
-       [HideInInspector]public int EnemyCount;
-       [HideInInspector]public int ExistEnemyCount;
-       [HideInInspector]public Enemy EnemyPrefab;
+       [HideInInspector] public int EnemyCount;
+        public int ExistEnemyCount;
+       [HideInInspector] public Enemy EnemyPrefab;
     }
 }

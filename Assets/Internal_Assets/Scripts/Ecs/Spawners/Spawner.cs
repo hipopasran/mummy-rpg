@@ -8,6 +8,10 @@ namespace Secret
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public class Spawner : MonoProvider<SpawnerComponent>
     {
-        
+        public void EnemyDead()
+        {
+            ref var c = ref Stash.Get(Entity);
+            c.ExistEnemyCount -= 1;
+        }
     }
 }

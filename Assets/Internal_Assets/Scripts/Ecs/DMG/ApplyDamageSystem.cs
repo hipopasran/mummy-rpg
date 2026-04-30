@@ -42,6 +42,7 @@ namespace Secret
                 var p = enemy.Root.gameObject.GetComponent<ActiveDamage>();
                 Object.Destroy(p);
                 
+                enemy.SpawerLink.EnemyDead();
                 enemy.Root.gameObject.SetActive(false);
             }
         }
