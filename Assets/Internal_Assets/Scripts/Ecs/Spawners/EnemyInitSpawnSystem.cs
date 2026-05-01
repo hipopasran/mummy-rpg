@@ -48,34 +48,11 @@ namespace Secret
             {
                 for (int i = 0; i < spawner.EnemyCount; i++)
                 {
-                    var spawnPos = GetNearestNavMeshPoint(spawner.Position.position, spawner.Radius);
-                    var newEnemy = GameObject.Instantiate(spawner.EnemyPrefab, spawnPos, Quaternion.identity);
-                    newEnemy.transform.SetParent(spawner.Position);
-                    newEnemy.Setup(spawner.SpawnerLink,entity, spawner.Position.position, spawner.Radius, 99 - spawner.ExistEnemyCount);
-                    newEnemy.SetWalkParams(spawner.Setup.WaitIdleMinTime, spawner.Setup.WaitIdleMaxTime, spawner.Setup.WalkSpeed, spawner.Setup.RunSpeed);
-                    var walkFilter = newEnemy.gameObject.AddComponent<EnemyWalkFilter>();
-                    walkFilter.Setup();
-
-                    spawner.ExistEnemyCount += 1;
+                    spawner.SpawnerLink.SpawnEnemy(ref spawner);
                 }
                 
                 Object.Destroy(spawnerInit.FilterLink);
             }
-        }
-        
-        private Vector3 GetNearestNavMeshPoint(Vector3 sourcePosition, float range)
-        {
-            float angle = Random.value * Mathf.PI * 2;
-            float distance = range * Mathf.Sqrt(Random.value); 
-            Vector2 point = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * distance;
-            Vector3 randomPos = sourcePosition + new Vector3(point.x,0,point.y);
-
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomPos, out hit, 1.0f, NavMesh.AllAreas))
-            {
-                return hit.position;
-            }
-            return sourcePosition;
         }
     }
 }

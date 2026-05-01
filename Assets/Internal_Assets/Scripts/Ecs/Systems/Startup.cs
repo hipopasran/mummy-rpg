@@ -25,6 +25,7 @@ namespace Secret
             
             // Enemy Spawn
             systemGroup.AddSystem(new EnemyInitSpawnSystem());
+            systemGroup.AddSystem(new SpawnerNeedSpawnSystem());
             
             // Enemy movement
             systemGroup.AddSystem(new EnemyWalkSystem());

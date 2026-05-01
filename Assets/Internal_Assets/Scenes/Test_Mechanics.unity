@@ -1763,9 +1763,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.Spawner
   serializedData:
+    SpawnerGameObject: {fileID: 1565530438}
     SpawnerLink: {fileID: 1565530443}
     Setup: {fileID: 11400000, guid: 4a8c9213359b24aad8497d69e1b14d09, type: 2}
     Position: {fileID: 1565530439}
+    TimeToRespawn: 3
+    Timer: 0
     Radius: 4
     EnemyCount: 5
     ExistEnemyCount: 0
