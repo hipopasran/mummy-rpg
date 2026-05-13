@@ -30,6 +30,7 @@ namespace Secret
 
         [Title("Resorces")] 
         public float Exp;
+        public int Cargo;
 
         [Title("Debug")] 
         public Spawner SpawerLink;

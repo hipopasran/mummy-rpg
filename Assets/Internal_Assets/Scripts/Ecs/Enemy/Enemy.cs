@@ -11,10 +11,12 @@ namespace Secret
     public class Enemy : MonoProvider<EnemyComponent>
     {
         private Request<ExpRequest> _expRequest;
+        private Request<CargoRequest> _cargoRequest;
         
         protected override void Initialize()
         {
             _expRequest = World.Default.GetRequest<ExpRequest>();
+            _cargoRequest = World.Default.GetRequest<CargoRequest>();
         }
         
         public void Setup(Spawner spawnerLink, Entity spawner, Vector3 spawnerPos, float walkRadius, int agentPriority)
@@ -48,6 +50,17 @@ namespace Secret
                 //TODO: Possible null?
                 TargetEntity = Entity,
                 Exp = c.Exp
+            });
+        }
+
+        public void SendCargoRequest()
+        {
+            ref var c = ref Stash.Get(Entity);
+            _cargoRequest.Publish(new CargoRequest
+            {
+                //TODO: Possible null?
+                TargetEntity = Entity,
+                Cargo = c.Cargo
             });
         }
     }

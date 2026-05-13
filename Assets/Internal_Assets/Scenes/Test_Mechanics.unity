@@ -2416,6 +2416,7 @@ GameObject:
   - component: {fileID: 713015006}
   - component: {fileID: 713015008}
   - component: {fileID: 713015007}
+  - component: {fileID: 713015009}
   m_Layer: 5
   m_Name: Cargo
   m_TagString: Untagged
@@ -2481,6 +2482,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713015005}
   m_CullTransparentMesh: 1
+--- !u!114 &713015009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713015005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94088656033e04c78b866b8bb9ada51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Secret.CargoView
+  serializedData:
+    ViewLink: {fileID: 713015009}
+    FillBarMaxValue: 870
+    FillBar: {fileID: 1272206245}
+    CargoValueText: {fileID: 1903242246}
 --- !u!1 &728451879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,6 +2804,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Secret.PlayerStats
   _expCurrent: 0
   _expMax: 100
+  _cargoCurrent: 0
+  _cargoMax: 50
 --- !u!1 &1045086483
 GameObject:
   m_ObjectHideFlags: 0
@@ -5055,7 +5075,7 @@ GameObject:
   - component: {fileID: 1903242247}
   - component: {fileID: 1903242246}
   m_Layer: 5
-  m_Name: HP_Value
+  m_Name: Cargo_Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -41,6 +41,7 @@ namespace Secret
             {
                 // Send exp and Resources request
                 enemy.ProviderLink.SendExpRequest();
+                enemy.ProviderLink.SendCargoRequest();
                 //
                 
                 var p = enemy.Root.gameObject.GetComponent<ActiveDamage>();
