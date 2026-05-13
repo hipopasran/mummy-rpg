@@ -6,6 +6,7 @@ namespace Secret
     public class ExpSystem : ISystem
     {
         private Filter _filter;
+        private Stash<ExpViewComponent> _expViewStash;
         
         private Request<ExpRequest> _expRequest;
         
@@ -18,19 +19,27 @@ namespace Secret
         public void OnAwake()
         {
             _expRequest = World.GetRequest<ExpRequest>();
+            _filter = World.Filter.With<ExpViewComponent>().Build();
+            _expViewStash = World.GetStash<ExpViewComponent>();
         }
         
         public void OnUpdate(float deltaTime)
         {
             foreach (var request in _expRequest.Consume())
             {
-                ApplyExp(request.TargetEntity, request.Exp);
+                ApplyExp(request.Exp);
             }
         }
 
-        private void ApplyExp(Entity entity, float exp)
+        private void ApplyExp(float exp)
         {
             PlayerStats.Instance.AddExp(exp);
+
+            foreach (var entity in _filter)
+            {
+                ref var e = ref _expViewStash.Get(entity);
+                e.ViewLink.UpdateValues();
+            }
         }
     }
 }
