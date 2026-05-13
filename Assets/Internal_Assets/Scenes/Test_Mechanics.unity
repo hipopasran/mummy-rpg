@@ -1759,6 +1759,7 @@ Transform:
   - {fileID: 2147467}
   - {fileID: 728451880}
   - {fileID: 292068538}
+  - {fileID: 993527575}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &580923774
@@ -2739,6 +2740,52 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &993527574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993527575}
+  - component: {fileID: 993527576}
+  m_Layer: 0
+  m_Name: PlayerStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &993527575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993527574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 457353121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &993527576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993527574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98400f46f1c7465b87e2a2a399b71e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Secret.PlayerStats
+  _expCurrent: 0
+  _expMax: 0
 --- !u!1 &1045086483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,7 +3468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 38.7, y: -103}
+  m_AnchoredPosition: {x: 38.69995, y: -103}
   m_SizeDelta: {x: 213, y: 251}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1178543202
@@ -5959,18 +6006,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1567473306}
     m_Modifications:
-    - target: {fileID: 433653510659551932, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 704301604359279081, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2225233140299155129, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2471530231521872930, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
       propertyPath: m_Name
       value: Enemy_Test
@@ -5979,18 +6014,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 287245038}
-    - target: {fileID: 5996986961351734099, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7499054288104720315, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837956313316806352, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8449049943267492442, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6029,10 +6052,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8449049943267492442, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8958058485547172526, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
-      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -13,6 +13,7 @@ namespace Secret
     public struct EnemyComponent : IComponent
     {
         [Title("Links")]
+        public Enemy ProviderLink;
         public Transform Root;
         public NavMeshAgent Agent;
 
@@ -26,6 +27,9 @@ namespace Secret
 
         public float WalkSpeed;
         public float RunSpeed;
+
+        [Title("Resorces")] 
+        public float Exp;
 
         [Title("Debug")] 
         public Spawner SpawerLink;

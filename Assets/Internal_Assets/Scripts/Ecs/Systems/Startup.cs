@@ -41,6 +41,9 @@ namespace Secret
             systemGroup.AddSystem(new HealthBarRotationSystem());
             systemGroup.AddSystem(new HealthBarValueViewSystem());
             
+            // Resources
+            systemGroup.AddSystem(new ExpSystem());
+            
             // Camera
             systemGroup.AddSystem(new CameraScaleSystem());
             

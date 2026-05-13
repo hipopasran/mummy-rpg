@@ -39,6 +39,10 @@ namespace Secret
 
             if (enemy.CurrentHealth <= 0)
             {
+                // Send exp and Resources request
+                enemy.ProviderLink.SendExpRequest();
+                //
+                
                 var p = enemy.Root.gameObject.GetComponent<ActiveDamage>();
                 Object.Destroy(p);
                 

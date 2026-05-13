@@ -10,6 +10,13 @@ namespace Secret
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public class Enemy : MonoProvider<EnemyComponent>
     {
+        private Request<ExpRequest> _expRequest;
+        
+        protected override void Initialize()
+        {
+            _expRequest = World.Default.GetRequest<ExpRequest>();
+        }
+        
         public void Setup(Spawner spawnerLink, Entity spawner, Vector3 spawnerPos, float walkRadius, int agentPriority)
         {
             ref var c = ref Stash.Get(Entity);
@@ -31,6 +38,17 @@ namespace Secret
             c.RunSpeed = runSpeed;
 
             c.Agent.speed = walkSpeed;
+        }
+
+        public void SendExpRequest()
+        {
+            ref var c = ref Stash.Get(Entity);
+            _expRequest.Publish(new ExpRequest
+            {
+                //TODO: Possible null?
+                TargetEntity = Entity,
+                Exp = c.Exp
+            });
         }
     }
 }
