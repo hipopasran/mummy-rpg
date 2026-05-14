@@ -1,4 +1,5 @@
 using Scellecs.Morpeh;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Secret
@@ -35,7 +36,17 @@ namespace Secret
 
         private void ApplyDamage(ref EnemyComponent enemy, ref ActiveDamageComponent dmg, float deltaTime)
         {
-            enemy.CurrentHealth -= 10f * deltaTime;
+            // Check Cargo have place
+            if (!PlayerStats.Instance.IsHaveCargoPlace(enemy.Cargo))
+            {
+                var p = enemy.Root.gameObject.GetComponent<ActiveDamage>();
+                Object.Destroy(p);
+                var hw = enemy.Root.gameObject.AddComponent<HealWait>();
+                hw.Setup(2f);
+                return;
+            }
+            
+            enemy.CurrentHealth -= 20f * deltaTime;
 
             if (enemy.CurrentHealth <= 0)
             {
