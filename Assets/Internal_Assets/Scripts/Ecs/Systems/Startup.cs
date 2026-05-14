@@ -44,6 +44,7 @@ namespace Secret
             // Resources
             systemGroup.AddSystem(new ExpSystem());
             systemGroup.AddSystem(new CargoSystem());
+            systemGroup.AddSystem(new CargoFullSystem());
             
             // Camera
             systemGroup.AddSystem(new CameraScaleSystem());

@@ -17,7 +17,7 @@ namespace Secret
 
             if (PlayerStats.Instance.IsCargoFull)
             {
-                c.CargoValueText.text = "CARGO FULL";
+                c.CargoValueText.text = "CARGO IS FULL";
                 c.FillBar.sizeDelta =
                     new Vector2(c.FillBarMaxValue, c.FillBar.sizeDelta.y);
                 c.CargoFillImage.color = c.CargoFullColor;

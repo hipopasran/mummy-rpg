@@ -43,6 +43,8 @@ namespace Secret
                 Object.Destroy(p);
                 var hw = enemy.Root.gameObject.AddComponent<HealWait>();
                 hw.Setup(2f);
+                
+                enemy.ProviderLink.SendCargoFullRequest();
                 return;
             }
             

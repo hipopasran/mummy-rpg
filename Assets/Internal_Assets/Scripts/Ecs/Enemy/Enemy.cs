@@ -12,11 +12,13 @@ namespace Secret
     {
         private Request<ExpRequest> _expRequest;
         private Request<CargoRequest> _cargoRequest;
-        
+        private Request<CargoFullRequest> _cargoFullRequest;
+
         protected override void Initialize()
         {
             _expRequest = World.Default.GetRequest<ExpRequest>();
             _cargoRequest = World.Default.GetRequest<CargoRequest>();
+            _cargoFullRequest = World.Default.GetRequest<CargoFullRequest>();
         }
         
         public void Setup(Spawner spawnerLink, Entity spawner, Vector3 spawnerPos, float walkRadius, int agentPriority)
@@ -62,6 +64,11 @@ namespace Secret
                 TargetEntity = Entity,
                 Cargo = c.Cargo
             });
+        }
+
+        public void SendCargoFullRequest()
+        {
+            _cargoFullRequest.Publish(new CargoFullRequest());
         }
     }
 }
