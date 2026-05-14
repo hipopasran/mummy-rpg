@@ -14,10 +14,22 @@ namespace Secret
         public void UpdateValues()
         {
             ref var c = ref Stash.Get(Entity);
-            c.CargoValueText.text = "CARGO(" + PlayerStats.Instance.CargoCurrent + "/" + PlayerStats.Instance.CargoMax + ")";
-            c.FillBar.sizeDelta =
-                new Vector2(c.FillBarMaxValue * ((float)PlayerStats.Instance.CargoCurrent / (float)PlayerStats.Instance.CargoMax),
-                    c.FillBar.sizeDelta.y);
+
+            if (PlayerStats.Instance.IsCargoFull)
+            {
+                c.CargoValueText.text = "CARGO FULL";
+                c.FillBar.sizeDelta =
+                    new Vector2(c.FillBarMaxValue, c.FillBar.sizeDelta.y);
+                c.CargoFillImage.color = c.CargoFullColor;
+            }
+            else
+            {
+                c.CargoValueText.text = "CARGO(" + PlayerStats.Instance.CargoCurrent + "/" + PlayerStats.Instance.CargoMax + ")";
+                c.FillBar.sizeDelta =
+                    new Vector2(c.FillBarMaxValue * ((float)PlayerStats.Instance.CargoCurrent / (float)PlayerStats.Instance.CargoMax),
+                        c.FillBar.sizeDelta.y);
+                c.CargoFillImage.color = c.CargoHavePlaceColor;
+            }
         }
     }
 }

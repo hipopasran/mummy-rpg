@@ -3,6 +3,7 @@ using TMPro;
 using TriInspector;
 using UnityEngine;
 using Unity.IL2CPP.CompilerServices;
+using UnityEngine.UI;
 
 namespace Secret
 {
@@ -16,5 +17,8 @@ namespace Secret
         public float FillBarMaxValue;
         public RectTransform FillBar;
         public TextMeshProUGUI CargoValueText;
+        public Color CargoHavePlaceColor;
+        public Color CargoFullColor;
+        public Image CargoFillImage;
     }
 }

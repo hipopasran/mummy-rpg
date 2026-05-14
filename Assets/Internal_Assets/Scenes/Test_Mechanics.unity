@@ -2499,6 +2499,9 @@ MonoBehaviour:
     FillBarMaxValue: 870
     FillBar: {fileID: 1272206245}
     CargoValueText: {fileID: 1903242246}
+    CargoHavePlaceColor: {r: 0.105882354, g: 0.8392157, b: 0.019607844, a: 1}
+    CargoFullColor: {r: 0.8392157, g: 0.05490196, b: 0.019607844, a: 1}
+    CargoFillImage: {fileID: 1272206246}
 --- !u!1 &728451879
 GameObject:
   m_ObjectHideFlags: 0

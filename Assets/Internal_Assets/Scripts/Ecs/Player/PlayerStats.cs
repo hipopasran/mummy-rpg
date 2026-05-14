@@ -21,6 +21,8 @@ namespace Secret
         public int CargoCurrent => _cargoCurrent;
         public int CargoMax => _cargoMax;
 
+        public bool IsCargoFull => _cargoCurrent >= _cargoMax;
+
         public bool IsHaveCargoPlace(int cargoNeed)
         {
             return _cargoCurrent + cargoNeed <= _cargoMax;
