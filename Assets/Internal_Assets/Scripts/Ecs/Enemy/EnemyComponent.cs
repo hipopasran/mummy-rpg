@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Scellecs.Morpeh;
 using TriInspector;
 using UnityEngine;
@@ -31,6 +32,7 @@ namespace Secret
         [Title("Resorces")] 
         public float Exp;
         public int Cargo;
+        public List<ResourcePack> Resources;
 
         [Title("Debug")] 
         public Spawner SpawerLink;

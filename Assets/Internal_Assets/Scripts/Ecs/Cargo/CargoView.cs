@@ -15,7 +15,7 @@ namespace Secret
         {
             ref var c = ref Stash.Get(Entity);
 
-            if (PlayerStats.Instance.IsCargoFull)
+            if (PlayerLiveStats.Instance.IsCargoFull)
             {
                 c.CargoValueText.text = "CARGO IS FULL";
                 c.FillBar.sizeDelta =
@@ -24,9 +24,9 @@ namespace Secret
             }
             else
             {
-                c.CargoValueText.text = "CARGO(" + PlayerStats.Instance.CargoCurrent + "/" + PlayerStats.Instance.CargoMax + ")";
+                c.CargoValueText.text = "CARGO(" + PlayerLiveStats.Instance.CargoCurrent + "/" + PlayerLiveStats.Instance.CargoMax + ")";
                 c.FillBar.sizeDelta =
-                    new Vector2(c.FillBarMaxValue * ((float)PlayerStats.Instance.CargoCurrent / (float)PlayerStats.Instance.CargoMax),
+                    new Vector2(c.FillBarMaxValue * ((float)PlayerLiveStats.Instance.CargoCurrent / (float)PlayerLiveStats.Instance.CargoMax),
                         c.FillBar.sizeDelta.y);
                 c.CargoFillImage.color = c.CargoHavePlaceColor;
             }

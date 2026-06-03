@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Scellecs.Morpeh;
 using UnityEngine;
 
@@ -26,13 +27,14 @@ namespace Secret
         {
             foreach (var request in _cargoRequest.Consume())
             {
-                ApplyCargo(request.Cargo);
+                ApplyCargo(request.Cargo, request.Resource);
             }
         }
         
-        private void ApplyCargo(int cargo)
+        private void ApplyCargo(int cargo, List<ResourcePack> resources)
         {
-            PlayerStats.Instance.AddCargo(cargo);
+            PlayerLiveStats.Instance.AddCargo(cargo);
+            PlayerLiveStats.Instance.AddResToCargo(resources);
 
             foreach (var entity in _filter)
             {

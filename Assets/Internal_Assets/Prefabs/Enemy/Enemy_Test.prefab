@@ -241,6 +241,9 @@ MonoBehaviour:
     RunSpeed: 0
     Exp: 10
     Cargo: 10
+    Resources:
+    - ResourceType: 0
+      Value: 100
     SpawerLink: {fileID: 0}
     AgentPriority: 0
     SpawnerPosition: {x: 0, y: 0, z: 0}

@@ -37,7 +37,7 @@ namespace Secret
         private void ApplyDamage(ref EnemyComponent enemy, ref ActiveDamageComponent dmg, float deltaTime)
         {
             // Check Cargo have place
-            if (!PlayerStats.Instance.IsHaveCargoPlace(enemy.Cargo))
+            if (!PlayerLiveStats.Instance.IsHaveCargoPlace(enemy.Cargo))
             {
                 var p = enemy.Root.gameObject.GetComponent<ActiveDamage>();
                 Object.Destroy(p);

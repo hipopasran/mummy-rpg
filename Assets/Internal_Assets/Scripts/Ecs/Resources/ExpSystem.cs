@@ -33,7 +33,7 @@ namespace Secret
 
         private void ApplyExp(float exp)
         {
-            PlayerStats.Instance.AddExp(exp);
+            PlayerLiveStats.Instance.AddExp(exp);
 
             foreach (var entity in _filter)
             {

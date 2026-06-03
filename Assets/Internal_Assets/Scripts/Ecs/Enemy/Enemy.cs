@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
@@ -62,7 +63,8 @@ namespace Secret
             {
                 //TODO: Possible null?
                 TargetEntity = Entity,
-                Cargo = c.Cargo
+                Cargo = c.Cargo,
+                Resource = c.Resources
             });
         }
 
