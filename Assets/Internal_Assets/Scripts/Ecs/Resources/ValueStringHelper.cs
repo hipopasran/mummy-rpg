@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Secret
 {
-    public static class ResourceValueStringHelper
+    public static class ValueStringHelper
     {
         public static string ScoreShow(double Score)
         {

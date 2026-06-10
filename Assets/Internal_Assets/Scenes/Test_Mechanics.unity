@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.PlayerStats
   _expCurrent: 0
-  _expMax: 100
+  _expMax: 1201000
   _cargoCurrent: 0
   _cargoMax: 50
   _cargoVisualRoot: {fileID: 1190586022}
