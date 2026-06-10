@@ -21,6 +21,12 @@ namespace Secret
             _cargoRequest = World.Default.GetRequest<CargoRequest>();
             _cargoFullRequest = World.Default.GetRequest<CargoFullRequest>();
         }
+
+        public List<ResourcePack> GetResources()
+        {
+            ref var c = ref Stash.Get(Entity);
+            return c.Resources;
+        }
         
         public void Setup(Spawner spawnerLink, Entity spawner, Vector3 spawnerPos, float walkRadius, int agentPriority)
         {
