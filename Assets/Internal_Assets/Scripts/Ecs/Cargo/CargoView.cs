@@ -11,6 +11,21 @@ namespace Secret
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public class CargoView : MonoProvider<CargoViewComponent>
     {
+        private void Start()
+        {
+            ResetCargo();
+        }
+
+        private void ResetCargo()
+        {
+            ref var c = ref Stash.Get(Entity);
+            c.CargoValueText.text = "CARGO(" + PlayerLiveStats.Instance.CargoCurrent + "/" + PlayerLiveStats.Instance.CargoMax + ")";
+            c.FillBar.sizeDelta =
+                new Vector2(c.FillBarMaxValue * ((float)PlayerLiveStats.Instance.CargoCurrent / (float)PlayerLiveStats.Instance.CargoMax),
+                    c.FillBar.sizeDelta.y);
+            c.CargoFillImage.color = c.CargoHavePlaceColor;
+        }
+
         public void UpdateValues()
         {
             ref var c = ref Stash.Get(Entity);
