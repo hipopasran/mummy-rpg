@@ -16,7 +16,7 @@ namespace Secret
             ResetCargo();
         }
 
-        private void ResetCargo()
+        public void ResetCargo()
         {
             ref var c = ref Stash.Get(Entity);
             c.CargoValueText.text = "CARGO(" + PlayerLiveStats.Instance.CargoCurrent + "/" + PlayerLiveStats.Instance.CargoMax + ")";

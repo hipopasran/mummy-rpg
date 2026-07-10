@@ -2,12 +2,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using TriInspector;
+using Scellecs.Morpeh;
 
 namespace Secret
 {
     public class PlayerLiveStats : MonoBehaviour
     {
         public static PlayerLiveStats Instance;
+        
+        private Request<CargoClearRequest> _cargoClearRequest;
 
         [Title("Exp")]
         [SerializeField] private float _expCurrent;
@@ -49,6 +52,25 @@ namespace Secret
             _cargoCurrent += cargo;
         }
 
+        public void ClearCargo()
+        {
+            foreach (var res in _cargoResources)
+            {
+                PlayerOveralStats.Instance.AddResources(res);
+            }
+            
+            _cargoResources.Clear();
+
+            foreach (var block in _resourceBlocks)
+            {
+                Destroy(block.gameObject);
+            }
+
+            _cargoCurrent = 0;
+            _resourceBlocks.Clear();
+            SendClearRequest();
+        }
+
         public void AddResToCargo(List<ResourcePack> resources)
         {
             foreach (var res in resources)
@@ -65,6 +87,11 @@ namespace Secret
                     AddVisualToCargoNew(res);
                 }
             }
+        }
+        
+        public void SendClearRequest()
+        {
+            _cargoClearRequest.Publish(new CargoClearRequest());
         }
 
         private void AddVisualToCargo(ResourcePack resource)
@@ -83,6 +110,8 @@ namespace Secret
         private void Awake()
         {
             Instance = this;
+            
+            _cargoClearRequest = World.Default.GetRequest<CargoClearRequest>();
         }
     }
 }
