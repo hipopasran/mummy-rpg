@@ -41,6 +41,8 @@ namespace Secret
         private void Awake()
         {
             Instance = this;
+            
+            DontDestroyOnLoad(gameObject);
         }
     }
 }
