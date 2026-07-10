@@ -9,6 +9,7 @@ namespace Secret
         private Filter _filter;
         private Stash<EnemyComponent> _enemyStash;
         private Stash<ActiveDamageComponent> _damageStash;
+        private Stash<HealthBarComponent> _healthBarStash;
 
         public World World { get; set; }
         public void Dispose()
@@ -18,9 +19,10 @@ namespace Secret
 
         public void OnAwake()
         {
-            this._filter = this.World.Filter.With<EnemyComponent>().With<ActiveDamageComponent>().Build();
+            this._filter = this.World.Filter.With<EnemyComponent>().With<ActiveDamageComponent>().With<HealthBarComponent>().Build();
             this._enemyStash = this.World.GetStash<EnemyComponent>();
             this._damageStash = this.World.GetStash<ActiveDamageComponent>();
+            this._healthBarStash = this.World.GetStash<HealthBarComponent>();
         }
         
         public void OnUpdate(float deltaTime)
@@ -29,6 +31,11 @@ namespace Secret
             {
                 ref var enemy = ref _enemyStash.Get(entity);
                 ref var dmg = ref _damageStash.Get(entity);
+                ref var healthBar = ref _healthBarStash.Get(entity);
+                if (!healthBar.Root.gameObject.activeSelf)
+                {
+                    healthBar.Root.gameObject.SetActive(true);
+                }
 
                 ApplyDamage(ref enemy, ref dmg, deltaTime);
             }
