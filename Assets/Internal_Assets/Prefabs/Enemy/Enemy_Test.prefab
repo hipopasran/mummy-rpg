@@ -103,7 +103,7 @@ MonoBehaviour:
     WalkSpeed: 0
     RunSpeed: 0
     Exp: 10
-    Cargo: 10
+    Cargo: 1
     Resources:
     - ResourceType: 1
       Value: 253456

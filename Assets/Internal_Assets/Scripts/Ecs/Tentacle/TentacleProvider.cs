@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Obi;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
@@ -13,11 +14,13 @@ namespace Secret
     {
         [SerializeField] private bool _isReady;
         [SerializeField] private Transform _enemy;
+        [SerializeField] private ObiRope _rope;
 
         public bool IsReady => _isReady;
         public Transform Enemy => _enemy;
         public void SetReady()
         {
+            _rope.distanceConstraintsEnabled = false;
             if (gameObject.TryGetComponent(out TentacleHomeFilterProvider homeProvider))
             {
                 Destroy(homeProvider);
@@ -37,6 +40,7 @@ namespace Secret
 
         public void SetHome()
         {
+            _rope.distanceConstraintsEnabled = true;
             _isReady = false;
             if (gameObject.TryGetComponent(out TentacleAttackFilterProvider attackProvider))
             {

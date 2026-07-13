@@ -22,6 +22,17 @@ namespace Secret
             _cargoFullRequest = World.Default.GetRequest<CargoFullRequest>();
         }
 
+        public bool GetEnoughCargo()
+        {
+            ref var c = ref Stash.Get(Entity);
+            if (PlayerLiveStats.Instance.CargoCurrent + c.Cargo <= PlayerLiveStats.Instance.CargoMax)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public List<ResourcePack> GetResources()
         {
             ref var c = ref Stash.Get(Entity);

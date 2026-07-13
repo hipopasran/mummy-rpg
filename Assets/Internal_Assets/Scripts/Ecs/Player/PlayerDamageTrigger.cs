@@ -55,6 +55,14 @@ namespace Secret
                 }
                 else
                 {
+                    if (other.gameObject.TryGetComponent(out Enemy enemy))
+                    {
+                        if (enemy)
+                        {
+                            if(!enemy.GetEnoughCargo()) return;
+                        }
+                    }
+                    
                     var tentacle = GetReadyTentacles();
                     if (tentacle != null)
                     {
@@ -84,6 +92,14 @@ namespace Secret
             }
             else
             {
+                if (other.gameObject.TryGetComponent(out Enemy enemy))
+                {
+                    if (enemy)
+                    {
+                        if(!enemy.GetEnoughCargo()) return;
+                    }
+                }
+                
                 var tentacle = GetReadyTentacles();
                 if (tentacle != null)
                 {
