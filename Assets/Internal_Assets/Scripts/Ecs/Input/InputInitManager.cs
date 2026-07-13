@@ -51,7 +51,7 @@ namespace Secret
 
             if (Input.GetMouseButtonUp(0))
             {
-                _joystickBack.gameObject.SetActive(false);
+                // _joystickBack.gameObject.SetActive(false);
                 _joystickBack.rectTransform.localPosition = _joystickStartPoint;
             }
         }
