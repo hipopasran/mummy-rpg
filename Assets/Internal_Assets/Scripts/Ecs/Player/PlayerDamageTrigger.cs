@@ -8,6 +8,8 @@ namespace Secret
 {
     public class PlayerDamageTrigger : MonoBehaviour
     {
+        [SerializeField] private Collider _collider;
+        [SerializeField] private bool _isCantAttack;
         [SerializeField] private List<TentacleProvider> _tentacles;
 
         private TentacleProvider GetReadyTentacles()
@@ -15,9 +17,36 @@ namespace Secret
             var readyTentacle = _tentacles.FirstOrDefault(x => x.IsReady);
             return readyTentacle;
         }
-        
+
+        private void Update()
+        {
+            if (PlayerLiveStats.Instance.IsCargoFull)
+            {
+                if (!_isCantAttack)
+                {
+                    _isCantAttack = true;
+                    _collider.enabled = false;
+
+                    foreach (var tentacle in _tentacles)
+                    {
+                        if(tentacle.Enemy != null)
+                            tentacle.SetHome();
+                    }
+                }
+            }
+            else
+            {
+                if (_isCantAttack)
+                {
+                    _isCantAttack = false;
+                    _collider.enabled = true;
+                }
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
+            if(_isCantAttack) return;
             if (other.gameObject.tag == "Enemy")
             {
                 if (other.gameObject.TryGetComponent(out ActiveDamage activeDamage))
@@ -43,21 +72,12 @@ namespace Secret
                         }
                     }
                 }
-
-                // if (other.gameObject.TryGetComponent(out ActiveHeal activeHeal))
-                // {
-                //     Object.Destroy(activeHeal);
-                // }
-                //
-                // if (other.gameObject.TryGetComponent(out HealWait healwait))
-                // {
-                //     Object.Destroy(healwait);
-                // }
             }
         }
 
         private void OnTriggerStay(Collider other)
         {
+            if(_isCantAttack) return;
             if (other.gameObject.TryGetComponent(out ActiveDamage activeDamage))
             {
                 return;
@@ -92,7 +112,7 @@ namespace Secret
                     Object.Destroy(activeDamage);
                     var hw = other.gameObject.AddComponent<HealWait>();
                     hw.Setup(2f);
-
+                    
                     var tentacle = _tentacles.FirstOrDefault(x => x.Enemy == other.transform);
                     if (tentacle)
                     {
