@@ -35,6 +35,7 @@ namespace Secret
             // Tentacles
             systemGroup.AddSystem(new TentacleRootFollowSystem());
             systemGroup.AddSystem(new TentacleAttackSystem());
+            systemGroup.AddSystem(new TentacleHomeSystem());
             
             // Enemy DMG
             systemGroup.AddSystem(new ApplyDamageSystem());

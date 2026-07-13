@@ -38,6 +38,11 @@ namespace Secret
 
         public void Attack(ref TentacleComponent tentacle, ref TentacleAttackFilter tentacleAttack)
         {
+            if (tentacleAttack.EnemyToAttack == null || !tentacleAttack.EnemyToAttack.gameObject.activeInHierarchy)
+            {
+                tentacle.Provider.SetHome();
+                return;
+            }
             tentacle.Root.LookAt(tentacleAttack.EnemyToAttack);
 
             if (Vector3.Distance(tentacle.Root.position, tentacleAttack.EnemyToAttack.position) < 0.01f)
@@ -46,7 +51,7 @@ namespace Secret
             }
             else
             {
-                float step = 20f * Time.deltaTime;
+                float step = 30f * Time.deltaTime;
                 tentacle.Root.position = Vector3.MoveTowards(tentacle.Root.position, tentacleAttack.EnemyToAttack.position, step);
             }
         }
