@@ -854,7 +854,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: MORPEH
+    Android: MORPEH;MORPEH_BURST
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
