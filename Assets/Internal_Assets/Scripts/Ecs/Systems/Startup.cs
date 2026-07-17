@@ -42,6 +42,7 @@ namespace Secret
             systemGroup.AddSystem(new ApplyDamageSystem());
             systemGroup.AddSystem(new ApplyHealSystem());
             systemGroup.AddSystem(new HealWaitSystem());
+            systemGroup.AddSystem(new EnemyFlyCargoSystem());
             
             // HealthBar
             systemGroup.AddSystem(new HealthBarRotationSystem());

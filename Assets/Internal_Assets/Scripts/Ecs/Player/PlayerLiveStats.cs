@@ -12,6 +12,8 @@ namespace Secret
         
         private Request<CargoClearRequest> _cargoClearRequest;
 
+        [SerializeField] private Transform _playerLink;
+
         [Title("Exp")]
         [SerializeField] private float _expCurrent;
         [SerializeField] private float _expMax;
@@ -34,6 +36,8 @@ namespace Secret
 
         public int CargoCurrent => _cargoCurrent;
         public int CargoMax => _cargoMax;
+
+        public Transform PlayerLink => _playerLink;
 
         public bool IsCargoFull => _cargoCurrent >= _cargoMax;
 

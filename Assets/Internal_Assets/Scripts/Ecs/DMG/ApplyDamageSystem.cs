@@ -59,16 +59,43 @@ namespace Secret
 
             if (enemy.CurrentHealth <= 0)
             {
+                if (enemy.Root.TryGetComponent(out EnemyWalkFilter walk))
+                {
+                    Object.Destroy(walk);
+                }
+                if (enemy.Root.TryGetComponent(out EnemyWalkInProgressFilter walkProgres))
+                {
+                    Object.Destroy(walkProgres);
+                }
+                if (enemy.Root.TryGetComponent(out EnemyWaitIdleFilter idle))
+                {
+                    Object.Destroy(idle);
+                }
+
+                if (enemy.Root.TryGetComponent(out HealthBarProvider health))
+                {
+                    health.EnemyDead();
+                    Object.Destroy(health);
+                }
+
+                enemy.collider.enabled = false;
+                enemy.Agent.enabled = false;
+                enemy.Root.parent = enemy.TentackleFromAttack;
+                enemy.TentackleFromAttack.parent.AddComponent<TentacleHomeFilterProvider>();
+
                 // Send exp and Resources request
-                enemy.ProviderLink.SendExpRequest();
-                enemy.ProviderLink.SendCargoRequest();
+                // enemy.ProviderLink.SendExpRequest();
+                // enemy.ProviderLink.SendCargoRequest();
                 //
                 
                 var p = enemy.Root.gameObject.GetComponent<ActiveDamage>();
                 Object.Destroy(p);
+
+                var flyCargo = enemy.Root.AddComponent<EnemyFlyCargoProvider>();
+                flyCargo.Setup();
                 
                 enemy.SpawerLink.EnemyDead();
-                enemy.Root.gameObject.SetActive(false);
+                // enemy.Root.gameObject.SetActive(false);
             }
         }
     }

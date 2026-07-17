@@ -22,6 +22,12 @@ namespace Secret
             _cargoFullRequest = World.Default.GetRequest<CargoFullRequest>();
         }
 
+        public void SetTentacle(Transform tentacleHead)
+        {
+            ref var c = ref Stash.Get(Entity);
+            c.TentackleFromAttack = tentacleHead;
+        }
+
         public bool GetEnoughCargo()
         {
             ref var c = ref Stash.Get(Entity);

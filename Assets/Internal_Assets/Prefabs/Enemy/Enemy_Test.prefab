@@ -96,6 +96,8 @@ MonoBehaviour:
     ProviderLink: {fileID: 41546231484930575}
     Root: {fileID: 8449049943267492442}
     Agent: {fileID: 5610821053426460752}
+    collider: {fileID: 6566819851085535462}
+    TentackleFromAttack: {fileID: 0}
     StartHealth: 100
     CurrentHealth: 100
     WaitIdleMinTime: 0

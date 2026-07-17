@@ -17,6 +17,8 @@ namespace Secret
         public Enemy ProviderLink;
         public Transform Root;
         public NavMeshAgent Agent;
+        public Collider collider;
+        public Transform TentackleFromAttack;
 
         [Title("Health")]
         public float StartHealth;

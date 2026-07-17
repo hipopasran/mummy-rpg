@@ -66,6 +66,8 @@ namespace Secret
                     var tentacle = GetReadyTentacles();
                     if (tentacle != null)
                     {
+                        var enemyProv = other.gameObject.GetComponent<Enemy>();
+                        enemyProv.SetTentacle(tentacle.Root);
                         tentacle.SetAttack(other.transform);
                         other.gameObject.AddComponent<ActiveDamage>();
                         
@@ -103,6 +105,8 @@ namespace Secret
                 var tentacle = GetReadyTentacles();
                 if (tentacle != null)
                 {
+                    var enemyProv = other.gameObject.GetComponent<Enemy>();
+                    enemyProv.SetTentacle(tentacle.Root);
                     tentacle.SetAttack(other.transform);
                     other.gameObject.AddComponent<ActiveDamage>();
                     
@@ -128,6 +132,9 @@ namespace Secret
                     Object.Destroy(activeDamage);
                     var hw = other.gameObject.AddComponent<HealWait>();
                     hw.Setup(2f);
+                    
+                    var enemyProv = other.gameObject.GetComponent<Enemy>();
+                    enemyProv.SetTentacle(null);
                     
                     var tentacle = _tentacles.FirstOrDefault(x => x.Enemy == other.transform);
                     if (tentacle)

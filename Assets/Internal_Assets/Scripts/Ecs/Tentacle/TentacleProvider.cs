@@ -15,12 +15,21 @@ namespace Secret
         [SerializeField] private bool _isReady;
         [SerializeField] private Transform _enemy;
         [SerializeField] private ObiRope _rope;
+        [SerializeField] private Transform _root;
 
         public bool IsReady => _isReady;
         public Transform Enemy => _enemy;
+        public Transform Root => _root;
+        
         public void SetReady()
         {
-            _rope.distanceConstraintsEnabled = false;
+            if(_enemy && _enemy.TryGetComponent(out Enemy enemyProvider))
+            {
+                enemyProvider.SendExpRequest();
+                enemyProvider.SendCargoRequest();
+                Destroy(_enemy.gameObject);
+            }
+            // _rope.distanceConstraintsEnabled = false;
             if (gameObject.TryGetComponent(out TentacleHomeFilterProvider homeProvider))
             {
                 Destroy(homeProvider);
@@ -33,6 +42,7 @@ namespace Secret
         public void SetAttack(Transform enemy)
         {
             _isReady = false;
+            // _rope.distanceConstraintsEnabled = false;
             var attackFilterProvider = gameObject.AddComponent<TentacleAttackFilterProvider>();
             attackFilterProvider.Setup(enemy);
             _enemy = enemy;
@@ -40,7 +50,7 @@ namespace Secret
 
         public void SetHome()
         {
-            _rope.distanceConstraintsEnabled = true;
+            // _rope.distanceConstraintsEnabled = true;
             _isReady = false;
             if (gameObject.TryGetComponent(out TentacleAttackFilterProvider attackProvider))
             {
