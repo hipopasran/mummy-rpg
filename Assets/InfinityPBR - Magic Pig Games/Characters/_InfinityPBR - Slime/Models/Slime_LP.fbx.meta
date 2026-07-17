@@ -1,59 +1,161 @@
 fileFormatVersion: 2
 guid: 7fec430887d724867a2483827db438a9
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Slime:Brains
-    100004: Slime:Eye
-    100006: Slime:Eye_Reflect
-    100008: Slime:Slime
-    100010: Slime:Veins
-    100012: slime_brain_bone
-    100014: slime_eye_bone
-    100016: slime_eye_region
-    100018: slime_rig_drag
-    100020: slime_rig_l_lid
-    100022: slime_rig_root
-    100024: slime_rig_top
-    100026: slime_rig_u_lid
-    400000: //RootNode
-    400002: Slime:Brains
-    400004: Slime:Eye
-    400006: Slime:Eye_Reflect
-    400008: Slime:Slime
-    400010: Slime:Veins
-    400012: slime_brain_bone
-    400014: slime_eye_bone
-    400016: slime_eye_region
-    400018: slime_rig_drag
-    400020: slime_rig_l_lid
-    400022: slime_rig_root
-    400024: slime_rig_top
-    400026: slime_rig_u_lid
-    4300000: Slime:Eye_Reflect
-    4300002: Slime:Eye
-    4300004: Slime:Slime
-    4300006: Slime:Brains
-    4300008: Slime:Veins
-    7400000: Start Walk
-    7400002: Walk Cycle
-    7400004: Backwalk
-    7400006: Dodge
-    7400008: Been Hit
-    7400010: Die
-    7400012: Resurrect
-    7400014: Idle Cycle
-    7400016: Idle Look
-    7400018: Cannonball Attack
-    7400020: Spit Attack
-    7400022: Stab Attack
-    9500000: //RootNode
-    13700000: Slime:Brains
-    13700002: Slime:Eye
-    13700004: Slime:Eye_Reflect
-    13700006: Slime:Slime
-    13700008: Slime:Veins
+  serializedVersion: 24200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Slime:Brains
+  - first:
+      1: 100004
+    second: Slime:Eye
+  - first:
+      1: 100006
+    second: Slime:Eye_Reflect
+  - first:
+      1: 100008
+    second: Slime:Slime
+  - first:
+      1: 100010
+    second: Slime:Veins
+  - first:
+      1: 100012
+    second: slime_brain_bone
+  - first:
+      1: 100014
+    second: slime_eye_bone
+  - first:
+      1: 100016
+    second: slime_eye_region
+  - first:
+      1: 100018
+    second: slime_rig_drag
+  - first:
+      1: 100020
+    second: slime_rig_l_lid
+  - first:
+      1: 100022
+    second: slime_rig_root
+  - first:
+      1: 100024
+    second: slime_rig_top
+  - first:
+      1: 100026
+    second: slime_rig_u_lid
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Slime:Brains
+  - first:
+      4: 400004
+    second: Slime:Eye
+  - first:
+      4: 400006
+    second: Slime:Eye_Reflect
+  - first:
+      4: 400008
+    second: Slime:Slime
+  - first:
+      4: 400010
+    second: Slime:Veins
+  - first:
+      4: 400012
+    second: slime_brain_bone
+  - first:
+      4: 400014
+    second: slime_eye_bone
+  - first:
+      4: 400016
+    second: slime_eye_region
+  - first:
+      4: 400018
+    second: slime_rig_drag
+  - first:
+      4: 400020
+    second: slime_rig_l_lid
+  - first:
+      4: 400022
+    second: slime_rig_root
+  - first:
+      4: 400024
+    second: slime_rig_top
+  - first:
+      4: 400026
+    second: slime_rig_u_lid
+  - first:
+      43: 4300000
+    second: Slime:Eye_Reflect
+  - first:
+      43: 4300002
+    second: Slime:Eye
+  - first:
+      43: 4300004
+    second: Slime:Slime
+  - first:
+      43: 4300006
+    second: Slime:Brains
+  - first:
+      43: 4300008
+    second: Slime:Veins
+  - first:
+      74: 7400000
+    second: Start Walk
+  - first:
+      74: 7400002
+    second: Walk Cycle
+  - first:
+      74: 7400004
+    second: Backwalk
+  - first:
+      74: 7400006
+    second: Dodge
+  - first:
+      74: 7400008
+    second: Been Hit
+  - first:
+      74: 7400010
+    second: Die
+  - first:
+      74: 7400012
+    second: Resurrect
+  - first:
+      74: 7400014
+    second: Idle Cycle
+  - first:
+      74: 7400016
+    second: Idle Look
+  - first:
+      74: 7400018
+    second: Cannonball Attack
+  - first:
+      74: 7400020
+    second: Spit Attack
+  - first:
+      74: 7400022
+    second: Stab Attack
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Slime:Brains
+  - first:
+      137: 13700002
+    second: Slime:Eye
+  - first:
+      137: 13700004
+    second: Slime:Eye_Reflect
+  - first:
+      137: 13700006
+    second: Slime:Slime
+  - first:
+      137: 13700008
+    second: Slime:Veins
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -61,7 +163,7 @@ ModelImporter:
       name: slime_pallette
     second: {fileID: 2100000, guid: 30df9b9048e544f6c9ac512b50ee606a, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -70,9 +172,8 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -90,6 +191,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Start Walk
       takeName: Start Walk
+      internalID: 0
       firstFrame: 1
       lastFrame: 60
       wrapMode: 0
@@ -144,6 +246,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk Cycle
       takeName: Walk Cycle
+      internalID: 0
       firstFrame: 60
       lastFrame: 157
       wrapMode: 0
@@ -156,7 +259,7 @@ ModelImporter:
       loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -194,10 +297,11 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 60
     - serializedVersion: 16
       name: Backwalk
       takeName: Backwalk
+      internalID: 0
       firstFrame: 194
       lastFrame: 238
       wrapMode: 0
@@ -252,6 +356,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Dodge
       takeName: Dodge
+      internalID: 0
       firstFrame: 244
       lastFrame: 288
       wrapMode: 0
@@ -306,6 +411,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Been Hit
       takeName: Been Hit
+      internalID: 0
       firstFrame: 301
       lastFrame: 330
       wrapMode: 0
@@ -360,6 +466,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Die
       takeName: Die
+      internalID: 0
       firstFrame: 342
       lastFrame: 465
       wrapMode: 0
@@ -414,6 +521,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Resurrect
       takeName: Resurrect
+      internalID: 0
       firstFrame: 482
       lastFrame: 591
       wrapMode: 0
@@ -468,6 +576,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle Cycle
       takeName: Idle Cycle
+      internalID: 0
       firstFrame: 606
       lastFrame: 673
       wrapMode: 0
@@ -522,6 +631,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle Look
       takeName: Idle Look
+      internalID: 0
       firstFrame: 680
       lastFrame: 786
       wrapMode: 0
@@ -530,7 +640,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -576,6 +686,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Cannonball Attack
       takeName: Cannonball Attack
+      internalID: 0
       firstFrame: 795
       lastFrame: 897
       wrapMode: 0
@@ -630,6 +741,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Spit Attack
       takeName: Spit Attack
+      internalID: 0
       firstFrame: 899
       lastFrame: 952
       wrapMode: 0
@@ -684,6 +796,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Stab Attack
       takeName: Stab Attack
+      internalID: 0
       firstFrame: 963
       lastFrame: 1030
       wrapMode: 0
@@ -742,25 +855,39 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
     importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
     indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.099999994
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -769,10 +896,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -782,13 +909,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 10
     rootMotionBoneName: slime_rig_root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

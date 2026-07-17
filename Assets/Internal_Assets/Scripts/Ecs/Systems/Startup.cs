@@ -22,6 +22,7 @@ namespace Secret
             // Player Movement
             systemGroup.AddSystem(new MobileInputSystem());
             systemGroup.AddSystem(new MovementSystem());
+            systemGroup.AddSystem(new PlayerAnimationSystem());
             
             // Enemy Spawn
             systemGroup.AddSystem(new EnemyInitSpawnSystem());
