@@ -7,6 +7,6 @@ namespace Secret
     public class ResourcePack
     {
         public ResourceType ResourceType;
-        public int Value;
+        public double Value;
     }
 }
