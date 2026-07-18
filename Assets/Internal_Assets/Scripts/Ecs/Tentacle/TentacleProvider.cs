@@ -28,6 +28,9 @@ namespace Secret
                 enemyProvider.SendExpRequest();
                 enemyProvider.SendCargoRequest();
                 Destroy(_enemy.gameObject);
+                
+                // Add Reaction with VFX to player
+                PlayerLiveStats.Instance.PlayEatParticle();
             }
             // _rope.distanceConstraintsEnabled = false;
             if (gameObject.TryGetComponent(out TentacleHomeFilterProvider homeProvider))

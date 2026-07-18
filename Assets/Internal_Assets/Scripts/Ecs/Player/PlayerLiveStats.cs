@@ -13,6 +13,7 @@ namespace Secret
         private Request<CargoClearRequest> _cargoClearRequest;
 
         [SerializeField] private Transform _playerLink;
+        [SerializeField] private ParticleSystem _eatParticle;
 
         [Title("Exp")]
         [SerializeField] private float _expCurrent;
@@ -44,6 +45,11 @@ namespace Secret
         public bool IsHaveCargoPlace(int cargoNeed)
         {
             return _cargoCurrent + cargoNeed <= _cargoMax;
+        }
+
+        public void PlayEatParticle()
+        {
+            _eatParticle.Play();
         }
 
         public void AddExp(float exp)
