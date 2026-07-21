@@ -12,6 +12,7 @@ namespace Secret
         [SerializeField] private TextMeshProUGUI _currentValueText;
         [SerializeField] private TextMeshProUGUI _nextValueText;
         [SerializeField] private TextMeshProUGUI _mainResCostText;
+        [SerializeField] private Color _disableColor;
         
         [SerializeField] private GameObject _arrowValues;
         [SerializeField] private Button _buttonBuy;
@@ -19,10 +20,30 @@ namespace Secret
 
         public void TryBuyUpgrade()
         {
-
+            var upgrade = PlayerUpgradeManager.Instance.GetUpgradeByType(_upgradeType);
+            var currentLevel = PlayerUpgradeManager.Instance.GetCurrentUpgradeStateByType(_upgradeType);
+            foreach (var costRes in upgrade.Levels[currentLevel].Cost.Resources)
+            {
+                PlayerResourceStats.Instance.RemoveResource(costRes);
+            }
+            
+            PlayerUpgradeManager.Instance.BuyUpgradeByType(_upgradeType);
+            UpdateVisual();
         }
 
         private void OnEnable()
+        {
+            UpdateVisual();
+
+            PlayerResourceStats.Instance.OnAddResource += UpdateResourceCallback;
+        }
+
+        private void OnDisable()
+        {
+            if(PlayerResourceStats.Instance) PlayerResourceStats.Instance.OnAddResource -= UpdateResourceCallback;
+        }
+
+        private void UpdateResourceCallback(ResourcePack resourcePack)
         {
             UpdateVisual();
         }
@@ -57,10 +78,10 @@ namespace Secret
             _mainResCostText.text = ValueStringHelper.ScoreShow(upgrade.Levels[currentLevel].Cost.Resources[0].Value);
             var res = PlayerResourceStats.Instance.GetResourceByType(upgrade.Levels[currentLevel].Cost.Resources[0]
                 .ResourceType);
-            if (res.Value < upgrade.Levels[currentLevel].Cost.Resources[0].Value)
+            if (res == null || res.Value < upgrade.Levels[currentLevel].Cost.Resources[0].Value)
             {
                 _buttonBuy.interactable = false;
-                _mainResCostText.color = Color.red;
+                _mainResCostText.color = _disableColor;
             }
             else
             {

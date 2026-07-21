@@ -17,6 +17,16 @@ namespace Secret
         [SerializeField] private List<CurrentUpgradeState> _currentUpgrades;
         [SerializeField] private List<Upgrade> _upgrades;
 
+        #region Buy Methods
+
+        public void BuyUpgradeByType(UpgradeType upgradeType)
+        {
+            var upgrade = _currentUpgrades.FirstOrDefault(x => x.UpgradeType == upgradeType);
+            upgrade.CurrentUpgradeIndex += 1;
+        }
+
+        #endregion
+
         #region Get Methods
         
         public Upgrade GetUpgradeByType(UpgradeType upgradeType)
@@ -71,7 +81,7 @@ namespace Secret
             if (upg != null)
             {
                 var upgrade = _upgrades.FirstOrDefault(x => x.UpgradeType == upgradeType);
-                if (upg.CurrentUpgradeIndex >= upgrade.Levels.Count)
+                if (upg.CurrentUpgradeIndex >= upgrade.Levels.Count - 1)
                 {
                     return 9999;
                 }
@@ -96,13 +106,14 @@ namespace Secret
                 var upgrade = _upgrades.FirstOrDefault(x => x.UpgradeType == current.UpgradeType);
                 if(upgrade == null) continue;
 
-                if (current.CurrentUpgradeIndex < upgrade.Levels.Count)
+                if (current.CurrentUpgradeIndex < upgrade.Levels.Count-1)
                 {
                     var cost = upgrade.Levels[current.CurrentUpgradeIndex + 1].Cost.Resources;
                     bool haveResources = true;
                     foreach (var res in cost)
                     {
-                        if (PlayerResourceStats.Instance.GetResourceByType(res.ResourceType).Value >= res.Value)
+                        var resPack = PlayerResourceStats.Instance.GetResourceByType(res.ResourceType);
+                        if ( resPack != null && resPack.Value >= res.Value)
                         {
                             continue;
                         }
@@ -111,8 +122,11 @@ namespace Secret
                             haveResources = false;
                         }
                     }
-                    
-                    if(haveResources) _avliableUpgradeCircle.SetActive(true);
+
+                    if (haveResources)
+                    {
+                        _avliableUpgradeCircle.SetActive(true);
+                    }
                 }
             }
         }

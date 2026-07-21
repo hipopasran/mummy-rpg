@@ -20,6 +20,16 @@ namespace Secret
             return res;
         }
 
+        public void RemoveResource(ResourcePack resource)
+        {
+            var playerRes = _resources.FirstOrDefault(x => x.ResourceType == resource.ResourceType);
+            if(playerRes == null) return;
+
+            playerRes.Value -= resource.Value;
+
+            OnAddResource?.Invoke(playerRes);
+        }
+
         public void AddResources(ResourcePack resource)
         {
             var x = _resources.FirstOrDefault(x => x.ResourceType == resource.ResourceType);

@@ -19,7 +19,7 @@ namespace Secret
             UpdateResourceStart();
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             if (PlayerResourceStats.Instance) PlayerResourceStats.Instance.OnAddResource -= TryCheckValueChange;
         }

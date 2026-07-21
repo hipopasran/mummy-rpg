@@ -109,8 +109,10 @@ MonoBehaviour:
     Resources:
     - ResourceType: 3
       Value: 253456
-    - ResourceType: 2
+      icon: {fileID: 0}
+    - ResourceType: 4
       Value: 2000
+      icon: {fileID: 0}
     SpawerLink: {fileID: 0}
     AgentPriority: 0
     SpawnerPosition: {x: 0, y: 0, z: 0}
