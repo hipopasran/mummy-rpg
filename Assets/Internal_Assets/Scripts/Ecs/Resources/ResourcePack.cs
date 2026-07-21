@@ -8,5 +8,6 @@ namespace Secret
     {
         public ResourceType ResourceType;
         public double Value;
+        public Sprite icon;
     }
 }

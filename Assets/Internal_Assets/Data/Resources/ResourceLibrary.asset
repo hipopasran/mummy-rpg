@@ -14,4 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceLibrary
   _resources:
   - {fileID: 11400000, guid: fc87033f6ad604be9b045e3572785cb9, type: 2}
+  - {fileID: 11400000, guid: 95b9a3278b00d4dacb982852e0c4b11c, type: 2}
   - {fileID: 11400000, guid: 30601d7a8d01144cdbe0cd4d13eb9e91, type: 2}
+  - {fileID: 11400000, guid: 4ee6c6434dff1456a860709890a01d7c, type: 2}
+  - {fileID: 11400000, guid: 5fbbac79ec69d4741bf1e0205739a984, type: 2}
+  - {fileID: 11400000, guid: 62a6f5e7b3a144468b3802bf0182f9f2, type: 2}
+  - {fileID: 11400000, guid: 9b333a851d9814919987e331493c2ffb, type: 2}
+  - {fileID: 11400000, guid: 1c317386fbe564102ba913e52508daac, type: 2}
+  - {fileID: 11400000, guid: f3bebb44aacb24a73b7a373f07f6b8f6, type: 2}
+  - {fileID: 11400000, guid: 9fcac0434262d45a9a659c29ba6089c9, type: 2}

@@ -17,6 +17,7 @@ namespace Secret
             _resType = resource.ResourceType;
             // TODO: Set Icon
             _resValue.text = ValueStringHelper.ScoreShow(resource.Value);
+            _resIcon.sprite = resource.icon;
         }
     }
 }

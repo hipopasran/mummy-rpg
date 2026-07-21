@@ -12,6 +12,7 @@ namespace Secret
         
         private Request<CargoClearRequest> _cargoClearRequest;
 
+        [SerializeField] private ResourceLibrary _resourceLibrary;
         [SerializeField] private Transform _playerLink;
         [SerializeField] private ParticleSystem _eatParticle;
 
@@ -104,6 +105,12 @@ namespace Secret
             _cargoClearRequest.Publish(new CargoClearRequest());
         }
 
+        public ResourceSetup GetResPackForLibrary(ResourceType resType)
+        {
+            var res = _resourceLibrary._resources.FirstOrDefault(x => x.ResourceType == resType);
+            return res;
+        }
+
         private void AddVisualToCargo(ResourcePack resource)
         {
             var block = _resourceBlocks.FirstOrDefault(x => x.ResourceType == resource.ResourceType);
@@ -112,6 +119,8 @@ namespace Secret
 
         private void AddVisualToCargoNew(ResourcePack resource)
         {
+            var res = _resourceLibrary._resources.FirstOrDefault(x => x.ResourceType == resource.ResourceType);
+            resource.icon = res.Icon;
             var block = Instantiate(_resourceBlock, _cargoVisualRoot);
             block.Setup(resource);
             _resourceBlocks.Add(block);

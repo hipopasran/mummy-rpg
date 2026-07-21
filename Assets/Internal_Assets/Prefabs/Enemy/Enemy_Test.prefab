@@ -107,7 +107,7 @@ MonoBehaviour:
     Exp: 10
     Cargo: 1
     Resources:
-    - ResourceType: 1
+    - ResourceType: 3
       Value: 253456
     - ResourceType: 2
       Value: 2000
