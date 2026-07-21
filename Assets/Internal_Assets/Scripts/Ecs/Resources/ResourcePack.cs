@@ -7,7 +7,7 @@ namespace Secret
     public class ResourcePack
     {
         public ResourceType ResourceType;
-        public double Value;
+        [SerializeField] public float Value;
         public Sprite icon;
     }
 }
