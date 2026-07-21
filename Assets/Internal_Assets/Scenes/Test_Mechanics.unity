@@ -1944,7 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 8
   _root: {fileID: 186119040}
   _valueText: {fileID: 1365372624}
 --- !u!222 &186119043
@@ -5354,7 +5354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 1
   _root: {fileID: 478320724}
   _valueText: {fileID: 919912583}
 --- !u!222 &478320727
@@ -5538,7 +5538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 10
   _root: {fileID: 522935963}
   _valueText: {fileID: 1982859952}
 --- !u!222 &522935966
@@ -7602,7 +7602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 5
   _root: {fileID: 623992568}
   _valueText: {fileID: 1076099057}
 --- !u!222 &623992571
@@ -11856,7 +11856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 2
   _root: {fileID: 1024370180}
   _valueText: {fileID: 1729619430}
 --- !u!222 &1024370183
@@ -14623,7 +14623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 9
   _root: {fileID: 1181589788}
   _valueText: {fileID: 1652899847}
 --- !u!222 &1181589791
@@ -21736,7 +21736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 7
   _root: {fileID: 1760396247}
   _valueText: {fileID: 1375481583}
 --- !u!222 &1760396250
@@ -25325,7 +25325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b24ce3a297d24aeb99f18cd8c9378ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceUIPresenterUpgrade
-  _resourceType: 3
+  _resourceType: 6
   _root: {fileID: 2053375230}
   _valueText: {fileID: 657059716}
 --- !u!222 &2053375233
