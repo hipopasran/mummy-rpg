@@ -67,7 +67,7 @@ namespace Secret
         {
             foreach (var res in _cargoResources)
             {
-                PlayerOveralStats.Instance.AddResources(res);
+                PlayerResourceStats.Instance.AddResources(res);
             }
             
             _cargoResources.Clear();

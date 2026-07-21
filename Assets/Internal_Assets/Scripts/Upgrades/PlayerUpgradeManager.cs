@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TriInspector;
 using UnityEngine;
 
 namespace Secret
@@ -8,9 +9,16 @@ namespace Secret
     public class PlayerUpgradeManager : MonoBehaviour
     {
         public static PlayerUpgradeManager Instance;
+
+        [Title("Upgrade Button")]
+        [SerializeField] private GameObject _avliableUpgradeCircle;
+
+        [Title("Upgrades Link")]
         [SerializeField] private List<CurrentUpgradeState> _currentUpgrades;
         [SerializeField] private List<Upgrade> _upgrades;
 
+        #region Get Methods
+        
         public Upgrade GetUpgradeByType(UpgradeType upgradeType)
         {
             var upgrade = _upgrades.FirstOrDefault(x => x.UpgradeType == upgradeType);
@@ -73,10 +81,55 @@ namespace Secret
 
             return 9999;
         }
+        
+        #endregion
 
+        private void Init()
+        {
+            PlayerResourceStats.Instance.OnAddResource += UpdateAvaliableUpgrade;
+        }
+
+        private void UpdateAvaliableUpgrade(ResourcePack resourcePack)
+        {
+            foreach (var current in _currentUpgrades)
+            {
+                var upgrade = _upgrades.FirstOrDefault(x => x.UpgradeType == current.UpgradeType);
+                if(upgrade == null) continue;
+
+                if (current.CurrentUpgradeIndex < upgrade.Levels.Count)
+                {
+                    var cost = upgrade.Levels[current.CurrentUpgradeIndex + 1].Cost.Resources;
+                    bool haveResources = true;
+                    foreach (var res in cost)
+                    {
+                        if (PlayerResourceStats.Instance.GetResourceByType(res.ResourceType).Value >= res.Value)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            haveResources = false;
+                        }
+                    }
+                    
+                    if(haveResources) _avliableUpgradeCircle.SetActive(true);
+                }
+            }
+        }
+        
         private void Awake()
         {
             Instance = this;
+        }
+
+        private void Start()
+        {
+            Init();
+        }
+
+        private void OnDestroy()
+        {
+            if(PlayerResourceStats.Instance) PlayerResourceStats.Instance.OnAddResource -= UpdateAvaliableUpgrade;
         }
     }
 

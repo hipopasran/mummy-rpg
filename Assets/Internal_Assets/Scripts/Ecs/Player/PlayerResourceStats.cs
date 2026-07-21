@@ -6,9 +6,9 @@ using TriInspector;
 
 namespace Secret
 {
-    public class PlayerOveralStats : MonoBehaviour
+    public class PlayerResourceStats : MonoBehaviour
     {
-        public static PlayerOveralStats Instance;
+        public static PlayerResourceStats Instance;
         public Action<ResourcePack> OnAddResource;
         
         [Title("Resources In Cargo")] 

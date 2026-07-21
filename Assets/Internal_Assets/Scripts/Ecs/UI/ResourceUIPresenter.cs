@@ -11,14 +11,14 @@ namespace Secret
         
         private void Start()
         {
-            PlayerOveralStats.Instance.OnAddResource += TryCheckValueChange;
+            PlayerResourceStats.Instance.OnAddResource += TryCheckValueChange;
             
             UpdateResourceStart();
         }
 
         private void OnDestroy()
         {
-            if (PlayerOveralStats.Instance) PlayerOveralStats.Instance.OnAddResource -= TryCheckValueChange;
+            if (PlayerResourceStats.Instance) PlayerResourceStats.Instance.OnAddResource -= TryCheckValueChange;
         }
 
         private void TryCheckValueChange(ResourcePack res)
@@ -36,7 +36,7 @@ namespace Secret
 
         private void UpdateResourceStart()
         {
-            var resPack = PlayerOveralStats.Instance.GetResourceByType(_resourceType);
+            var resPack = PlayerResourceStats.Instance.GetResourceByType(_resourceType);
             if (resPack != null)
             {
                 UpdateText(resPack.Value);
