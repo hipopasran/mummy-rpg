@@ -9,6 +9,8 @@ namespace Secret
         [SerializeField] private ResourceType _resourceType;
         [SerializeField] private GameObject _root;
         [SerializeField] private TextMeshProUGUI _valueText;
+
+        [SerializeField] private bool _showIfZero;
         
         private void OnEnable()
         {
@@ -44,7 +46,14 @@ namespace Secret
             }
             else
             {
-                _root.SetActive(false);
+                if (_showIfZero)
+                {
+                    UpdateText(0);
+                }
+                else
+                {
+                    _root.SetActive(false);   
+                }
             }
         }
 
