@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d5dacabf62a0406f93321577f02cae1, type: 3}
-  m_Name: R_Main
+  m_Name: R_Side2
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceSetup
-  ResourceType: 3
-  ResourceName: DNA
-  Icon: {fileID: 21300000, guid: 0553d55d74ccb432785f4b9aed91a5a7, type: 3}
+  ResourceType: 6
+  ResourceName: Blood Blue
+  Icon: {fileID: 21300000, guid: 07eb030537e4b4cca9394cf409d75804, type: 3}

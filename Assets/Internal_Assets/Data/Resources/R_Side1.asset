@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5dacabf62a0406f93321577f02cae1, type: 3}
   m_Name: R_Side1
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceSetup
-  ResourceType: 2
-  ResourceName: Bones
-  Icon: {fileID: 21300000, guid: 9afae51c879f64fbe8e99720382bd3be, type: 3}
+  ResourceType: 5
+  ResourceName: Blood Red
+  Icon: {fileID: 21300000, guid: 7f2c1d5a55c3942e9a2bb08c4827337f, type: 3}

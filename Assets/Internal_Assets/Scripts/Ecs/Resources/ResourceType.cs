@@ -13,6 +13,8 @@ namespace Secret
         Side1,
         Side2,
         Side3,
-        Side4
+        Side4,
+        Side5,
+        Side6
     }
 }
