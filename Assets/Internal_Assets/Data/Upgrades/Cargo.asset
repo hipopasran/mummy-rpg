@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0180789f8e404fa1940ea61f75974d3, type: 3}
+  m_Name: Cargo
+  m_EditorClassIdentifier: Assembly-CSharp::Secret.Upgrade
+  UpgradeType: 1
+  StartValue: 4
+  Levels:
+  - Value: 6
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 25
+        icon: {fileID: 0}
+  - Value: 9
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 31
+        icon: {fileID: 0}
+  - Value: 12
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 39
+        icon: {fileID: 0}
+  - Value: 15
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 48
+        icon: {fileID: 0}
+  - Value: 18
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 61
+        icon: {fileID: 0}
+  - Value: 22
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 76
+        icon: {fileID: 0}
+  - Value: 26
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 95
+        icon: {fileID: 0}
+  - Value: 31
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 119
+        icon: {fileID: 0}
+  - Value: 35
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 149
+        icon: {fileID: 0}
+  - Value: 41
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 186
+        icon: {fileID: 0}
+  - Value: 46
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 232
+        icon: {fileID: 0}
+  - Value: 52
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 291
+        icon: {fileID: 0}
+  - Value: 59
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 363
+        icon: {fileID: 0}
+  - Value: 64
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 454
+        icon: {fileID: 0}
+  - Value: 69
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 568
+        icon: {fileID: 0}
+  - Value: 75
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 710
+        icon: {fileID: 0}
+  - Value: 80
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 888
+        icon: {fileID: 0}
+  - Value: 86
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 1110
+        icon: {fileID: 0}
+  - Value: 92
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 1390
+        icon: {fileID: 0}
+  - Value: 99
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 1730
+        icon: {fileID: 0}
+  - Value: 105
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 2170
+        icon: {fileID: 0}
+  - Value: 112
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 2710
+        icon: {fileID: 0}
+  - Value: 118
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 3390
+        icon: {fileID: 0}
+  - Value: 125
+    Cost:
+      Resources:
+      - ResourceType: 3
+        Value: 4240
+        icon: {fileID: 0}
+      - ResourceType: 5
+        Value: 1
+        icon: {fileID: 0}
