@@ -101,6 +101,7 @@ namespace Secret
 
         private void UpdateAvaliableUpgrade(ResourcePack resourcePack)
         {
+            var haveResourcesSome = false;
             foreach (var current in _currentUpgrades)
             {
                 var upgrade = _upgrades.FirstOrDefault(x => x.UpgradeType == current.UpgradeType);
@@ -125,10 +126,20 @@ namespace Secret
 
                     if (haveResources)
                     {
-                        _avliableUpgradeCircle.SetActive(true);
+                        haveResourcesSome = true;
                     }
                 }
             }
+
+            if (haveResourcesSome)
+            {
+                _avliableUpgradeCircle.SetActive(true);
+            }
+            else
+            {
+                _avliableUpgradeCircle.SetActive(false);
+            }
+            
         }
         
         private void Awake()
