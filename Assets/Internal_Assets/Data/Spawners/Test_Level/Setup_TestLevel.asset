@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addbada03150549c684c0e7ab217a0e4, type: 3}
   m_Name: Setup_TestLevel
   m_EditorClassIdentifier: Assembly-CSharp::Secret.EnemySetupForSpawner
-  EnemyCount: 5
+  EnemyCount: 25
   EnemyPrefab: {fileID: 41546231484930575, guid: 423e6fbbe1c754b08b7a63f2adcccde6, type: 3}
   Radius: 4
   WaitIdleMinTime: 1
