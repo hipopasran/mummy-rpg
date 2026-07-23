@@ -192,9 +192,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2004845470}
     m_Modifications:
+    - target: {fileID: 154223196117198293, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: ShapeModule.arc.value
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 154223196117198293, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: ClampVelocityModule.dampen
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 154223196117198293, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 154223196117198293, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 154223196117198293, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: ClampVelocityModule.magnitude.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 154223196117198293, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008613459365449457, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008613459365449457, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4454225417303009574, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
       propertyPath: m_Name
       value: BloodBoneExplosionSimpleG
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658939649047743469, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658939649047743469, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658939649047743469, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4658939649047743469, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -202,7 +246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4658939649047743469, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: 0.519
       objectReference: {fileID: 0}
     - target: {fileID: 4658939649047743469, guid: e0307aa26e53338429b666dfec0d2b79, type: 3}
       propertyPath: m_LocalPosition.z
