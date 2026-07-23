@@ -37,10 +37,19 @@ namespace Secret
         {
             enemyWaitIdle.CurrentWaitTime -= deltaTime;
 
+            if (enemy.animator)
+            {
+                if (enemy.animator.GetBool("Walking"))
+                {
+                    enemy.animator.SetBool("Walking", false);
+                }
+            }
+
             if (enemyWaitIdle.CurrentWaitTime <= 0)
             {
                 Object.Destroy(enemyWaitIdle.FilterLink);
                 var walkFilter = enemy.Root.gameObject.AddComponent<EnemyWalkFilter>();
+                enemy.Agent.isStopped = false;
                 walkFilter.Setup();
             }
         }

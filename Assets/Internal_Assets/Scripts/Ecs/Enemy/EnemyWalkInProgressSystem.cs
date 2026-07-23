@@ -39,6 +39,7 @@ namespace Secret
             if (Vector3.Distance(enemy.Root.position, walkProgress.WalkPosition) < 1.0f)
             {
                 Object.Destroy(walkProgress.FilterLink);
+                enemy.Agent.isStopped = true;
                 var idleFilter = enemy.Root.gameObject.AddComponent<EnemyWaitIdleFilter>();
                 idleFilter.Setup(Random.Range(enemy.WaitIdleMinTime, enemy.WaitIdleMaxTime));
             }

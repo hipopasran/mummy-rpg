@@ -18,6 +18,7 @@ namespace Secret
         public Transform Root;
         public NavMeshAgent Agent;
         public Collider collider;
+        public Animator animator;
         public Transform TentackleFromAttack;
 
         [Title("Health")]

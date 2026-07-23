@@ -41,6 +41,13 @@ namespace Secret
             Object.Destroy(enemyWalk.FilterLink);
             var walkProgress = enemy.Root.gameObject.AddComponent<EnemyWalkInProgressFilter>();
             walkProgress.SetPoint(newPoint);
+            if (enemy.animator)
+            {
+                if (!enemy.animator.GetBool("Walking"))
+                {
+                    enemy.animator.SetBool("Walking", true);
+                }
+            }
         }
         
         private Vector3 GetNearestNavMeshPoint(Vector3 sourcePosition, float range)
