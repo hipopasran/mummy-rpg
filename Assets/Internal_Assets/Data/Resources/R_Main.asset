@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Secret.ResourceSetup
   ResourceType: 3
   ResourceName: DNA
-  Icon: {fileID: 21300000, guid: 0553d55d74ccb432785f4b9aed91a5a7, type: 3}
+  Icon: {fileID: 21300000, guid: ef71f1fb2b8ec4d2b960dc8dc955f41f, type: 3}
