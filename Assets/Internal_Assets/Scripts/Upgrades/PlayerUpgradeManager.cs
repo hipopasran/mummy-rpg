@@ -23,6 +23,10 @@ namespace Secret
         {
             var upgrade = _currentUpgrades.FirstOrDefault(x => x.UpgradeType == upgradeType);
             upgrade.CurrentUpgradeIndex += 1;
+
+            var currentUpgrade = GetCurrentValueByType(upgradeType);
+            
+            PlayerCurrentParams.Instance.UpdateValueParam(upgrade.UpgradeType, currentUpgrade);
         }
 
         #endregion

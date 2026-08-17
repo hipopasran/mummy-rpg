@@ -55,7 +55,8 @@ namespace Secret
                 return;
             }
             
-            enemy.CurrentHealth -= 20f * deltaTime;
+            // TODO: Подключить дамаг из парамтеров игрока
+            enemy.CurrentHealth -= 14f * deltaTime;
 
             if (enemy.CurrentHealth <= 0)
             {

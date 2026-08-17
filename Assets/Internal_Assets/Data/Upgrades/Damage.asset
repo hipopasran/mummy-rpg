@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Damage
   m_EditorClassIdentifier: Assembly-CSharp::Secret.Upgrade
   UpgradeType: 0
-  StartValue: 14
+  StartValue: 10
   Levels:
   - Value: 17
     Cost:

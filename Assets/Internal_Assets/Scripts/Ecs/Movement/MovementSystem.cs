@@ -52,6 +52,7 @@ namespace Secret
                 new Vector3(input.Rotation.x, move.Transform.forward.y, input.Rotation.y),
                 15f * Time.fixedDeltaTime);
             
+            // TODO: Подключить скорость из прокачки игрока
             move.Agent.speed = move.WalkSpeed;
 
             // move
