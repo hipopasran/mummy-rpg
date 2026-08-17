@@ -56,7 +56,7 @@ namespace Secret
             }
             
             // TODO: Подключить дамаг из парамтеров игрока
-            enemy.CurrentHealth -= 14f * deltaTime;
+            enemy.CurrentHealth -= PlayerCurrentParams.Instance.Damage * deltaTime;
 
             if (enemy.CurrentHealth <= 0)
             {

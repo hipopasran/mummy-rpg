@@ -41,11 +41,11 @@ namespace Secret
 
         public Transform PlayerLink => _playerLink;
 
-        public bool IsCargoFull => _cargoCurrent >= _cargoMax;
+        public bool IsCargoFull => _cargoCurrent >= CargoMax;
 
         public bool IsHaveCargoPlace(int cargoNeed)
         {
-            return _cargoCurrent + cargoNeed <= _cargoMax;
+            return _cargoCurrent + cargoNeed <= CargoMax;
         }
 
         public void PlayEatParticle()

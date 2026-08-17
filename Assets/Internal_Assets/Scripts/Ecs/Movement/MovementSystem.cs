@@ -53,10 +53,10 @@ namespace Secret
                 15f * Time.fixedDeltaTime);
             
             // TODO: Подключить скорость из прокачки игрока
-            move.Agent.speed = move.WalkSpeed;
+            move.Agent.speed = PlayerCurrentParams.Instance.Speed;
 
             // move
-            move.Transform.position += move.Transform.forward * move.WalkSpeed * input.Rotation.magnitude * Time.deltaTime;
+            move.Transform.position += move.Transform.forward * move.Agent.speed * input.Rotation.magnitude * Time.deltaTime;
         }
     }
 }

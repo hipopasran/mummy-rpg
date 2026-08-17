@@ -28,6 +28,17 @@ namespace Secret
         
         [SerializeField] private List<Upgrade> _upgrades;
 
+        #region GetParams
+
+        public float Damage => _damageValue;
+        public float Cargo => _cargoValue;
+        public float Speed => _speedValue;
+        public float Radius => _radiusValue;
+        public float Tentacle => _tentacleCountValue;
+        public float Hp => _hpValue;
+
+        #endregion
+
         #region Init and destroy
         
         private void Awake()
