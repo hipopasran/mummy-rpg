@@ -7,4 +7,9 @@ namespace Secret
     {
         // public Entity TargetEntity;
     }
+
+    public struct CargoUpgradeRequest : IRequestData
+    {
+        
+    }
 }

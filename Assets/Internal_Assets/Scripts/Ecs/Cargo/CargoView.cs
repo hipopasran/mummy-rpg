@@ -11,11 +11,6 @@ namespace Secret
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public class CargoView : MonoProvider<CargoViewComponent>
     {
-        private void Start()
-        {
-            ResetCargo();
-        }
-
         public void ResetCargo()
         {
             ref var c = ref Stash.Get(Entity);

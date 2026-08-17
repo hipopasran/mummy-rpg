@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace Secret
         public static PlayerLiveStats Instance;
         
         private Request<CargoClearRequest> _cargoClearRequest;
+        private Request<CargoUpgradeRequest> _cargoUpdateRequest;
 
         [SerializeField] private ResourceLibrary _resourceLibrary;
         [SerializeField] private Transform _playerLink;
@@ -28,6 +30,7 @@ namespace Secret
         [SerializeField] private Transform _cargoVisualRoot;
         [SerializeField] private CargoResourceBlock _resourceBlock;
         [SerializeField] private List<CargoResourceBlock> _resourceBlocks;
+        [SerializeField] private CargoView _cargoView;
 
         [Title("Resources In Cargo")] 
         [SerializeField] private List<ResourcePack> _cargoResources;
@@ -131,6 +134,26 @@ namespace Secret
             Instance = this;
             
             _cargoClearRequest = World.Default.GetRequest<CargoClearRequest>();
+            _cargoUpdateRequest = World.Default.GetRequest<CargoUpgradeRequest>();
+            
+        }
+
+        private void Start()
+        {
+            PlayerCurrentParams.Instance.OnCargoUpgrade += CargoUpdate;
+            _cargoMax = PlayerCurrentParams.Instance.Cargo;
+            _cargoView.ResetCargo();
+        }
+
+        private void OnDisable()
+        {
+            if(PlayerCurrentParams.Instance != null) PlayerCurrentParams.Instance.OnCargoUpgrade += CargoUpdate;
+        }
+
+        private void CargoUpdate()
+        {
+            _cargoMax = PlayerCurrentParams.Instance.Cargo;
+            _cargoUpdateRequest.Publish(new CargoUpgradeRequest());
         }
     }
 }

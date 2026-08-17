@@ -53,6 +53,7 @@ namespace Secret
             systemGroup.AddSystem(new CargoSystem());
             systemGroup.AddSystem(new CargoFullSystem());
             systemGroup.AddSystem(new CargoClearSystem());
+            systemGroup.AddSystem(new CargoUpgradeSystem());
             
             // Camera
             systemGroup.AddSystem(new CameraScaleSystem());

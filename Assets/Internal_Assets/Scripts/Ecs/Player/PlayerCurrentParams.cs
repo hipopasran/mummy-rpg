@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.Localization.Platform.Android;
 using UnityEngine;
 
 namespace Secret
@@ -8,6 +7,8 @@ namespace Secret
     public class PlayerCurrentParams : MonoBehaviour
     {
         public static PlayerCurrentParams Instance;
+
+        public Action OnCargoUpgrade;
 
         #region Keys
         
@@ -31,10 +32,10 @@ namespace Secret
         #region GetParams
 
         public float Damage => _damageValue;
-        public float Cargo => _cargoValue;
+        public int Cargo => (int)_cargoValue;
         public float Speed => _speedValue;
         public float Radius => _radiusValue;
-        public float Tentacle => _tentacleCountValue;
+        public int Tentacle => (int)_tentacleCountValue;
         public float Hp => _hpValue;
 
         #endregion
@@ -70,6 +71,7 @@ namespace Secret
                     break;
                 case UpgradeType.Cargo:
                     _cargoValue = value;
+                    OnCargoUpgrade?.Invoke();
                     break;
                 case UpgradeType.Health:
                     _hpValue = value;
