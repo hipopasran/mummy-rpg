@@ -33,7 +33,7 @@ namespace Secret
 
         private void ApplyExp(float exp)
         {
-            PlayerCargoManager.Instance.AddExp(exp);
+            PlayerExpManager.Instance.AddExp(exp);
 
             foreach (var entity in _filter)
             {

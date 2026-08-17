@@ -15,10 +15,10 @@ namespace Secret
         {
             ref var c = ref Stash.Get(Entity);
             c.LevelNumber.text = "1";
-            c.ExpValueText.text = ValueStringHelper.ScoreShow(PlayerCargoManager.Instance.ExpCurrent) + "/"
-                + ValueStringHelper.ScoreShow(PlayerCargoManager.Instance.ExpMax);
+            c.ExpValueText.text = ValueStringHelper.ScoreShow(PlayerExpManager.Instance.ExpCurrent) + "/"
+                + ValueStringHelper.ScoreShow(PlayerExpManager.Instance.ExpMax);
             c.FillBar.sizeDelta =
-                new Vector2(c.FillBarMaxValue * (PlayerCargoManager.Instance.ExpCurrent / PlayerCargoManager.Instance.ExpMax),
+                new Vector2(c.FillBarMaxValue * (PlayerExpManager.Instance.ExpCurrent / PlayerExpManager.Instance.ExpMax),
                     c.FillBar.sizeDelta.y);
         }
 

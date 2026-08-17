@@ -18,10 +18,6 @@ namespace Secret
         [SerializeField] private Transform _playerLink;
         [SerializeField] private ParticleSystem _eatParticle;
 
-        [Title("Exp")]
-        [SerializeField] private float _expCurrent;
-        [SerializeField] private float _expMax;
-
         [Title("Cargo")]
         [SerializeField] private int _cargoCurrent;
         [SerializeField] private int _cargoMax;
@@ -35,9 +31,6 @@ namespace Secret
         [Title("Resources In Cargo")] 
         [SerializeField] private List<ResourcePack> _cargoResources;
         
-
-        public float ExpCurrent => _expCurrent;
-        public float ExpMax => _expMax;
 
         public int CargoCurrent => _cargoCurrent;
         public int CargoMax => _cargoMax;
@@ -54,11 +47,6 @@ namespace Secret
         public void PlayEatParticle()
         {
             _eatParticle.Play();
-        }
-
-        public void AddExp(float exp)
-        {
-            _expCurrent += exp;
         }
 
         public void AddCargo(int cargo)
