@@ -33,8 +33,8 @@ namespace Secret
         
         private void ApplyCargo(int cargo, List<ResourcePack> resources)
         {
-            PlayerLiveStats.Instance.AddCargo(cargo);
-            PlayerLiveStats.Instance.AddResToCargo(resources);
+            PlayerCargoManager.Instance.AddCargo(cargo);
+            PlayerCargoManager.Instance.AddResToCargo(resources);
 
             foreach (var entity in _filter)
             {

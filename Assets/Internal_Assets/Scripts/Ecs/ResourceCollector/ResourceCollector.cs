@@ -8,7 +8,7 @@ namespace Secret
         {
             if (other.gameObject.tag == "Player")
             {
-                PlayerLiveStats.Instance.ClearCargo();
+                PlayerCargoManager.Instance.ClearCargo();
             }
         }
     }

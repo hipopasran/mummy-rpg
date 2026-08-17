@@ -30,7 +30,7 @@ namespace Secret
                 Destroy(_enemy.gameObject);
                 
                 // Add Reaction with VFX to player
-                PlayerLiveStats.Instance.PlayEatParticle();
+                PlayerCargoManager.Instance.PlayEatParticle();
             }
             // _rope.distanceConstraintsEnabled = false;
             if (gameObject.TryGetComponent(out TentacleHomeFilterProvider homeProvider))

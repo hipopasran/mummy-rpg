@@ -14,9 +14,9 @@ namespace Secret
         public void ResetCargo()
         {
             ref var c = ref Stash.Get(Entity);
-            c.CargoValueText.text = "CARGO(" + PlayerLiveStats.Instance.CargoCurrent + "/" + PlayerLiveStats.Instance.CargoMax + ")";
+            c.CargoValueText.text = "CARGO(" + PlayerCargoManager.Instance.CargoCurrent + "/" + PlayerCargoManager.Instance.CargoMax + ")";
             c.FillBar.sizeDelta =
-                new Vector2(c.FillBarMaxValue * ((float)PlayerLiveStats.Instance.CargoCurrent / (float)PlayerLiveStats.Instance.CargoMax),
+                new Vector2(c.FillBarMaxValue * ((float)PlayerCargoManager.Instance.CargoCurrent / (float)PlayerCargoManager.Instance.CargoMax),
                     c.FillBar.sizeDelta.y);
             c.CargoFillImage.color = c.CargoHavePlaceColor;
         }
@@ -25,7 +25,7 @@ namespace Secret
         {
             ref var c = ref Stash.Get(Entity);
 
-            if (PlayerLiveStats.Instance.IsCargoFull)
+            if (PlayerCargoManager.Instance.IsCargoFull)
             {
                 c.CargoValueText.text = "CARGO IS FULL";
                 c.FillBar.sizeDelta =
@@ -34,9 +34,9 @@ namespace Secret
             }
             else
             {
-                c.CargoValueText.text = "CARGO(" + PlayerLiveStats.Instance.CargoCurrent + "/" + PlayerLiveStats.Instance.CargoMax + ")";
+                c.CargoValueText.text = "CARGO(" + PlayerCargoManager.Instance.CargoCurrent + "/" + PlayerCargoManager.Instance.CargoMax + ")";
                 c.FillBar.sizeDelta =
-                    new Vector2(c.FillBarMaxValue * ((float)PlayerLiveStats.Instance.CargoCurrent / (float)PlayerLiveStats.Instance.CargoMax),
+                    new Vector2(c.FillBarMaxValue * ((float)PlayerCargoManager.Instance.CargoCurrent / (float)PlayerCargoManager.Instance.CargoMax),
                         c.FillBar.sizeDelta.y);
                 c.CargoFillImage.color = c.CargoHavePlaceColor;
             }

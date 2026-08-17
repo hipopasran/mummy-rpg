@@ -19,7 +19,7 @@ namespace Secret
             var resources = _enemy.GetResources();
             foreach (var res in resources)
             {
-                var resSetup = PlayerLiveStats.Instance.GetResPackForLibrary(res.ResourceType);
+                var resSetup = PlayerCargoManager.Instance.GetResPackForLibrary(res.ResourceType);
                 res.icon = resSetup.Icon;
                 var b = Instantiate(_resourceBlock, _resourceVisualRoot);
                 b.Setup(res);

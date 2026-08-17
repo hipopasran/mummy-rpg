@@ -37,7 +37,7 @@ namespace Secret
         {
             if (enemy.Root.localScale.x > 0.5f)
             {
-                var distance = Vector3.Distance(enemy.Root.position, PlayerLiveStats.Instance.PlayerLink.position);
+                var distance = Vector3.Distance(enemy.Root.position, PlayerCargoManager.Instance.PlayerLink.position);
                 enemy.Root.localScale = enemy.Root.localScale  * distance/flyCargo.StartDistance;
             }
         }

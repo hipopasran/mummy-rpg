@@ -7,9 +7,9 @@ using Scellecs.Morpeh;
 
 namespace Secret
 {
-    public class PlayerLiveStats : MonoBehaviour
+    public class PlayerCargoManager : MonoBehaviour
     {
-        public static PlayerLiveStats Instance;
+        public static PlayerCargoManager Instance;
         
         private Request<CargoClearRequest> _cargoClearRequest;
         private Request<CargoUpgradeRequest> _cargoUpdateRequest;

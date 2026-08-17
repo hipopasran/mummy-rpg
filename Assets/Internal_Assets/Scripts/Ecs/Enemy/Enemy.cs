@@ -31,7 +31,7 @@ namespace Secret
         public bool GetEnoughCargo()
         {
             ref var c = ref Stash.Get(Entity);
-            if (PlayerLiveStats.Instance.CargoCurrent + c.Cargo <= PlayerLiveStats.Instance.CargoMax)
+            if (PlayerCargoManager.Instance.CargoCurrent + c.Cargo <= PlayerCargoManager.Instance.CargoMax)
             {
                 return true;
             }

@@ -20,7 +20,7 @@ namespace Secret
 
         private void Update()
         {
-            if (PlayerLiveStats.Instance.IsCargoFull)
+            if (PlayerCargoManager.Instance.IsCargoFull)
             {
                 if (!_isCantAttack)
                 {

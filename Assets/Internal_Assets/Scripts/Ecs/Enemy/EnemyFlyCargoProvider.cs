@@ -16,7 +16,7 @@ namespace Secret
         {
             ref var c = ref Stash.Get(Entity);
             c.Root = transform;
-            c.StartDistance = Vector3.Distance(transform.position, PlayerLiveStats.Instance.PlayerLink.position);
+            c.StartDistance = Vector3.Distance(transform.position, PlayerCargoManager.Instance.PlayerLink.position);
         }
     }
 }
