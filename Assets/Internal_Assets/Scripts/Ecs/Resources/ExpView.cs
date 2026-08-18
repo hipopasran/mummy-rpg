@@ -22,14 +22,14 @@ namespace Secret
                     c.FillBar.sizeDelta.y);
         }
 
-        private void Start()
-        {
-            ResetVisual();
-        }
+        // private void Start()
+        // {
+        //     ResetVisual();
+        // }
 
-        private void ResetVisual()
-        {
-            UpdateValues();
-        }
+        // private void ResetVisual()
+        // {
+        //     UpdateValues();
+        // }
     }
 }
