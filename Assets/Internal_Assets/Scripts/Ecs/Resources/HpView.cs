@@ -14,8 +14,8 @@ namespace Secret
         public void UpdateValues()
         {
             ref var c = ref Stash.Get(Entity);
-            c.ExpValueText.text = ValueStringHelper.ScoreShow(PlayerHpManager.Instance.CurrentHp) + "/"
-                + ValueStringHelper.ScoreShow(PlayerHpManager.Instance.MaxHp);
+            c.ExpValueText.text = "HP(" + ValueStringHelper.ScoreShow(PlayerHpManager.Instance.CurrentHp) + "/"
+                + ValueStringHelper.ScoreShow(PlayerHpManager.Instance.MaxHp) + ")";
             c.FillBar.sizeDelta =
                 new Vector2(c.FillBarMaxValue * (PlayerHpManager.Instance.CurrentHp / PlayerHpManager.Instance.MaxHp),
                     c.FillBar.sizeDelta.y);
