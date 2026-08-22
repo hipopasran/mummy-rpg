@@ -75,6 +75,7 @@ namespace Secret
                     break;
                 case UpgradeType.Health:
                     _hpValue = value;
+                    PlayerHpManager.Instance.UpgradeHp(_hpValue);
                     break;
                 case UpgradeType.Speed:
                     _speedValue = value;

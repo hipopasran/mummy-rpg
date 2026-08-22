@@ -9,6 +9,7 @@ namespace Secret
             if (other.gameObject.tag == "Player")
             {
                 PlayerCargoManager.Instance.ClearCargo();
+                PlayerHpManager.Instance.ResetHp();
             }
         }
     }

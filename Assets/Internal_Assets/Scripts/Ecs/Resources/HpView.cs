@@ -9,16 +9,15 @@ namespace Secret
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public class ExpView : MonoProvider<ExpViewComponent>
+    public class HpView : MonoProvider<HpViewComponent>
     {
         public void UpdateValues()
         {
             ref var c = ref Stash.Get(Entity);
-            c.LevelNumber.text = "1";
-            c.ExpValueText.text = ValueStringHelper.ScoreShow(PlayerExpManager.Instance.ExpCurrent) + "/"
-                + ValueStringHelper.ScoreShow(PlayerExpManager.Instance.ExpMax);
+            c.ExpValueText.text = ValueStringHelper.ScoreShow(PlayerHpManager.Instance.CurrentHp) + "/"
+                + ValueStringHelper.ScoreShow(PlayerHpManager.Instance.MaxHp);
             c.FillBar.sizeDelta =
-                new Vector2(c.FillBarMaxValue * (PlayerExpManager.Instance.ExpCurrent / PlayerExpManager.Instance.ExpMax),
+                new Vector2(c.FillBarMaxValue * (PlayerHpManager.Instance.CurrentHp / PlayerHpManager.Instance.MaxHp),
                     c.FillBar.sizeDelta.y);
         }
     }
