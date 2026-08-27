@@ -135,7 +135,7 @@ namespace Secret
 
         private void OnDisable()
         {
-            if(PlayerCurrentParams.Instance != null) PlayerCurrentParams.Instance.OnCargoUpgrade += CargoUpdate;
+            if(PlayerCurrentParams.Instance != null) PlayerCurrentParams.Instance.OnCargoUpgrade -= CargoUpdate;
         }
 
         private void CargoUpdate()

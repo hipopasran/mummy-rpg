@@ -9,6 +9,7 @@ namespace Secret
         public static PlayerCurrentParams Instance;
 
         public Action OnCargoUpgrade;
+        public Action OnTentacleUpgrade;
 
         #region Keys
         
@@ -85,6 +86,7 @@ namespace Secret
                     break;
                 case UpgradeType.Tentacle:
                     _tentacleCountValue = value;
+                    OnTentacleUpgrade?.Invoke();
                     break;
             }
         }

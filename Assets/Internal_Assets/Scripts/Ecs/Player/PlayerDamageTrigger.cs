@@ -12,6 +12,11 @@ namespace Secret
         [SerializeField] private bool _isCantAttack;
         [SerializeField] private List<TentacleProvider> _tentacles;
 
+        public void AddTentacle(TentacleProvider tentacle)
+        {
+            _tentacles.Add(tentacle);
+        }
+
         private TentacleProvider GetReadyTentacles()
         {
             var readyTentacle = _tentacles.FirstOrDefault(x => x.IsReady);
