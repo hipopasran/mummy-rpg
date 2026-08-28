@@ -10,6 +10,7 @@ namespace Secret
 
         public Action OnCargoUpgrade;
         public Action OnTentacleUpgrade;
+        public Action OnRadiusUpgrade;
 
         #region Keys
         
@@ -83,6 +84,7 @@ namespace Secret
                     break;
                 case UpgradeType.AttackRadius:
                     _radiusValue = value;
+                    OnRadiusUpgrade?.Invoke();
                     break;
                 case UpgradeType.Tentacle:
                     _tentacleCountValue = value;

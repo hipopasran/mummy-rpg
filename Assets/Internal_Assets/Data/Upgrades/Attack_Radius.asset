@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Attack_Radius
   m_EditorClassIdentifier: Assembly-CSharp::Secret.Upgrade
   UpgradeType: 4
-  StartValue: 10.5
+  StartValue: 2
   Levels:
-  - Value: 11
+  - Value: 2.1
     Cost:
       Resources:
       - ResourceType: 3
