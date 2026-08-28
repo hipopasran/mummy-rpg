@@ -6854,7 +6854,7 @@ GameObject:
   - component: {fileID: 308971484}
   - component: {fileID: 308971485}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: Dmg_Radius_Renderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
