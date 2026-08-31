@@ -110,7 +110,13 @@ MonoBehaviour:
     Cargo: 1
     Resources:
     - ResourceType: 3
-      Value: 1000
+      Value: 100000
+      icon: {fileID: 0}
+    - ResourceType: 9
+      Value: 12
+      icon: {fileID: 0}
+    - ResourceType: 6
+      Value: 12
       icon: {fileID: 0}
     SpawerLink: {fileID: 0}
     AgentPriority: 0

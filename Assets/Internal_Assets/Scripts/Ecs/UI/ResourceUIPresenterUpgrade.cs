@@ -11,6 +11,11 @@ namespace Secret
         [SerializeField] private TextMeshProUGUI _valueText;
 
         [SerializeField] private bool _showIfZero;
+
+        public void CheckForShowRes()
+        {
+            UpdateResourceStart();
+        }
         
         private void OnEnable()
         {
@@ -43,6 +48,7 @@ namespace Secret
             if (resPack != null)
             {
                 UpdateText(resPack.Value);
+                _root.SetActive(true);   
             }
             else
             {
