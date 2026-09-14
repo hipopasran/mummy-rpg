@@ -1,0 +1,94 @@
+using System;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Secret
+{
+    public class FarmUpgradeButtonController : MonoBehaviour
+    {
+        [SerializeField] private FarmUpgradeType _upgradeType;
+        [SerializeField] private FarmManager _farmManager;
+        [SerializeField] private TextMeshProUGUI _levelText;
+        [SerializeField] private TextMeshProUGUI _currentValueText;
+        [SerializeField] private TextMeshProUGUI _nextValueText;
+        [SerializeField] private TextMeshProUGUI _mainResCostText;
+        [SerializeField] private Color _disableColor;
+        
+        [SerializeField] private GameObject _arrowValues;
+        [SerializeField] private Button _buttonBuy;
+        
+        public void TryBuyUpgrade()
+        {
+            var upgrade = _farmManager.GetUpgradeByType(_upgradeType);
+            var currentLevel = _farmManager.GetCurrentUpgradeStateByType(_upgradeType);
+            foreach (var costRes in upgrade.Levels[currentLevel].Cost.Resources)
+            {
+                PlayerResourceStats.Instance.RemoveResource(costRes);
+            }
+            
+            // PlayerUpgradeManager.Instance.BuyUpgradeByType(_upgradeType);
+            _farmManager.ButUpgradeByType(_upgradeType);
+            UpdateVisual();
+        }
+
+        private void OnEnable()
+        {
+            UpdateVisual();
+
+            PlayerResourceStats.Instance.OnAddResource += UpdateResourceCallback;
+        }
+
+        private void OnDisable()
+        {
+            if(PlayerResourceStats.Instance) PlayerResourceStats.Instance.OnAddResource -= UpdateResourceCallback;
+        }
+
+        private void UpdateResourceCallback(ResourcePack resourcePack)
+        {
+            UpdateVisual();
+        }
+        
+        private void UpdateVisual()
+        {
+            var upgrade = _farmManager.GetUpgradeByType(_upgradeType);
+            var currentLevel = _farmManager.GetCurrentUpgradeStateByType(_upgradeType);
+            var currentValue = _farmManager.GetCurrentValueByType(_upgradeType);
+            var nextValue = _farmManager.GetNextValueByType(_upgradeType);
+
+            if (nextValue >= 9999)
+            {
+                _levelText.text = "MAX";
+                _currentValueText.text = ValueStringHelper.ScoreShow(currentValue);
+                _nextValueText.text = "";
+                _arrowValues.SetActive(false);
+                _buttonBuy.gameObject.SetActive(false);
+            }
+            else
+            {
+                _levelText.text = currentLevel + "/" + upgrade.Levels.Count;
+                _currentValueText.text = ValueStringHelper.ScoreShow(currentValue);
+                _nextValueText.text = ValueStringHelper.ScoreShow(nextValue);
+            
+                UpdateCost(currentLevel, upgrade);
+            }
+        }
+
+        private void UpdateCost(int currentLevel, FarmUpgrade upgrade)
+        {
+            _mainResCostText.text = ValueStringHelper.ScoreShow(upgrade.Levels[currentLevel].Cost.Resources[0].Value);
+            var res = PlayerResourceStats.Instance.GetResourceByType(upgrade.Levels[currentLevel].Cost.Resources[0]
+                .ResourceType);
+            if (res == null || res.Value < upgrade.Levels[currentLevel].Cost.Resources[0].Value)
+            {
+                _buttonBuy.interactable = false;
+                _mainResCostText.color = _disableColor;
+            }
+            else
+            {
+                _buttonBuy.interactable = true;
+                _mainResCostText.color = Color.white;
+            }
+        }
+    }
+}
