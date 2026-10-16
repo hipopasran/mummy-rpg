@@ -14,7 +14,7 @@ namespace Secret
         public void UpdateValues()
         {
             ref var c = ref Stash.Get(Entity);
-            c.LevelNumber.text = "1";
+            c.LevelNumber.text = PlayerExpManager.Instance.Level.ToString();
             c.ExpValueText.text = ValueStringHelper.ScoreShow(PlayerExpManager.Instance.ExpCurrent) + "/"
                 + ValueStringHelper.ScoreShow(PlayerExpManager.Instance.ExpMax);
             c.FillBar.sizeDelta =

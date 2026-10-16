@@ -19,7 +19,8 @@ namespace Secret
         [SerializeField] private PlayerLevelData _levels;
 
         [SerializeField] private ExpView _expView;
-        
+
+        public int Level => _level;
         public float ExpCurrent => _expCurrent;
         public float ExpMax => (float)_levels.Levels[_level];
 
