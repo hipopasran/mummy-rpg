@@ -7,6 +7,8 @@ namespace Secret
 {
     public class GateController : MonoBehaviour
     {
+        [SerializeField] private string _gateId;
+        
         [SerializeField] private float _duration;
         [SerializeField] private float _rightAngle;
         [SerializeField] private float _leftAngle;
@@ -24,6 +26,9 @@ namespace Secret
 
         private void OpenGate()
         {
+            PlayerPrefs.SetInt(_gateId, 1);
+            PlayerPrefs.Save();
+            
             if(_animationCoroutine != null) StopCoroutine(_animationCoroutine);
             _animationCoroutine = StartCoroutine(OpenAnimation());
         }
@@ -51,6 +56,29 @@ namespace Secret
 
             _rightRoot.localRotation = targetRotationRight;
             _leftRoot.localRotation = targetRotationLeft;
+        }
+
+        private void OpenInMoment()
+        {
+            Quaternion targetRotationRight = Quaternion.Euler(0, _rightAngle, 0); 
+            Quaternion targetRotationLeft = Quaternion.Euler(0, _leftAngle, 0);
+            
+            _rightRoot.localRotation = targetRotationRight;
+            _leftRoot.localRotation = targetRotationLeft;
+        }
+
+        private void Awake()
+        {
+            Load();
+        }
+
+        private void Load()
+        {
+            if (PlayerPrefs.HasKey(_gateId))
+            {
+                if(PlayerPrefs.GetInt(_gateId) == 1)
+                    OpenInMoment();
+            }
         }
     }
 }
