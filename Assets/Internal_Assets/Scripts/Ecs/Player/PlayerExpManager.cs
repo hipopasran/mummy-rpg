@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using TriInspector;
 
@@ -20,6 +21,9 @@ namespace Secret
 
         [SerializeField] private ExpView _expView;
 
+        [Title("Gates")] 
+        [SerializeField] private GateToOpen _firstLevel;
+        
         public int Level => _level;
         public float ExpCurrent => _expCurrent;
         public float ExpMax => (float)_levels.Levels[_level];
@@ -52,8 +56,26 @@ namespace Secret
             if (_expCurrent >= _levels.Levels[_level])
             {
                 _level += 1;
-                
+                TryCheckShowOpenGates();
                 _expView.UpdateValues();
+            }
+        }
+
+        private void TryCheckShowOpenGates()
+        {
+            switch (_level)
+            {
+                case 1:
+                    ShowOpenGates(_firstLevel);
+                    break;
+            }
+        }
+
+        private void ShowOpenGates(GateToOpen gates)
+        {
+            foreach (var gate in gates.Gates)
+            {
+                gate.OpenButton();
             }
         }
 
@@ -79,5 +101,11 @@ namespace Secret
         {
             SaveLevel();
         }
+    }
+
+    [Serializable]
+    public class GateToOpen
+    {
+        public List<GateController> Gates;
     }
 }
