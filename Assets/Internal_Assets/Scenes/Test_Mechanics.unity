@@ -24632,6 +24632,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 145777434}
   m_SourcePrefab: {fileID: 100100000, guid: e7772e633858665459afbbd8e444886d, type: 3}
+--- !u!114 &911862131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 627935852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &913558041
 GameObject:
   m_ObjectHideFlags: 0
@@ -31219,6 +31230,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5965205818101606986, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
   m_PrefabInstance: {fileID: 1135200350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1135200352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1135200350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &1139766710
 GameObject:
   m_ObjectHideFlags: 0
@@ -46774,6 +46796,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2084027401}
   m_SourcePrefab: {fileID: 100100000, guid: d885fbb570cda0843a6b848a787cee5a, type: 3}
+--- !u!114 &1615258402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1430713926}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &1618399979
 GameObject:
   m_ObjectHideFlags: 0
@@ -48935,6 +48968,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5965205818101606986, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
   m_PrefabInstance: {fileID: 1667178571}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667178573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1667178571}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1001 &1667615497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49001,6 +49045,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5965205818101606986, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
   m_PrefabInstance: {fileID: 1667615497}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667615499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1667615497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &1667922186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: e09e2418edffd814aad1ed73d5fc8045, type: 3}
@@ -51126,6 +51181,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5965205818101606986, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
   m_PrefabInstance: {fileID: 1734619662}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1734619664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1734619662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!4 &1735447679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9293e3c0800ac3741ba71cf5de95fd93, type: 3}
@@ -54223,6 +54289,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5965205818101606986, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
   m_PrefabInstance: {fileID: 1844496918}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1844496920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1844496918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &1844710526
 GameObject:
   m_ObjectHideFlags: 0
@@ -58917,6 +58994,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019122026}
   m_CullTransparentMesh: 1
+--- !u!114 &2026820632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 671833511}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &2028133920
 GameObject:
   m_ObjectHideFlags: 0
@@ -60684,6 +60772,33 @@ MonoBehaviour:
   _firstLevel:
     Gates:
     - {fileID: 5259433299870319416}
+  _secondLevel:
+    Gates:
+    - {fileID: 1844496920}
+  _thirdLevel:
+    Gates:
+    - {fileID: 1844496920}
+  _fourthLevel:
+    Gates:
+    - {fileID: 1667615499}
+    - {fileID: 1615258402}
+    - {fileID: 2081122606}
+  _fiveLevel:
+    Gates:
+    - {fileID: 2026820632}
+    - {fileID: 911862131}
+  _sixLevel:
+    Gates:
+    - {fileID: 1667178573}
+  _sevenLevel:
+    Gates:
+    - {fileID: 2112116373}
+  _eightLevel:
+    Gates:
+    - {fileID: 1135200352}
+  _nineLevel:
+    Gates:
+    - {fileID: 1734619664}
 --- !u!1 &2079759097
 GameObject:
   m_ObjectHideFlags: 0
@@ -60821,6 +60936,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079759097}
   m_CullTransparentMesh: 1
+--- !u!114 &2081122606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 2008543699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &2081560417 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: e09e2418edffd814aad1ed73d5fc8045, type: 3}
@@ -61701,6 +61827,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d885fbb570cda0843a6b848a787cee5a, type: 3}
   m_PrefabInstance: {fileID: 1313295437}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2112116373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5330789210884374854, guid: b41fb75dcaf6444aeab82e508223a87c, type: 3}
+  m_PrefabInstance: {fileID: 1324491311}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6173bb552a5403c814395c432d89e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GateController
 --- !u!1 &2112700544
 GameObject:
   m_ObjectHideFlags: 0

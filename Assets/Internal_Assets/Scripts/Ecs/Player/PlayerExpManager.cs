@@ -23,6 +23,14 @@ namespace Secret
 
         [Title("Gates")] 
         [SerializeField] private GateToOpen _firstLevel;
+        [SerializeField] private GateToOpen _secondLevel;
+        [SerializeField] private GateToOpen _thirdLevel;
+        [SerializeField] private GateToOpen _fourthLevel;
+        [SerializeField] private GateToOpen _fiveLevel;
+        [SerializeField] private GateToOpen _sixLevel;
+        [SerializeField] private GateToOpen _sevenLevel;
+        [SerializeField] private GateToOpen _eightLevel;
+        [SerializeField] private GateToOpen _nineLevel;
         
         public int Level => _level;
         public float ExpCurrent => _expCurrent;
